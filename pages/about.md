@@ -20,7 +20,7 @@ Ben Dichter is a data scientist consultant for neuroscience labs. He focuses on 
             Ben Dichter<br/>
 
             <div id="hide_email">
-            Email: <code>ben.di</code><b>I</b><code>chter</code><b>don't</b><code>@</code><b>want</b><code>bio</code><b>spam!
+            Email: <code>ben.di</code><b>I</b><code>chter</code><b>don't</b><code>@</code><b>want</b><code></code><b>spam!
             </b><code>gmail</code><b>So</b><code>.</code><b>please</b><code>co</code><b>leave
             </b><code>m</code>
             </div>
