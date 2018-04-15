@@ -19,13 +19,11 @@ keywords: data sharing, distributed neroscience, neuroscience, electrophysiology
 <table class="wide">
 <tr>
   <td class="left">
-    brokenaxes: python package for creating matplotlib plots with broken axes
     <a href="https://github.com/bendichter/brokenaxes">
         <img src="assets/broken_python_snake.png" alt="brokenaxes" title="brokenaxes"/>
     </a>
   </td>
   <td class="right">
-    The neural control of the larynx in humans
     <a href="https://github.com/ChangLabUcsf/larynx_control">
         <img src="assets/pitch_fig.png" alt="Pitch paper" title="Pitch paper"/>
     </a>
