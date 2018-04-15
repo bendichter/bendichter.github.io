@@ -1,7 +1,7 @@
 ---
 layout: page
 title: publications
-description: Karl Broman's publications
+description: Ben Dichter's publications
 ---
 
 # Under Construction
