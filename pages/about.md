@@ -2,13 +2,13 @@
 layout: page
 title: about
 ---
-Ben Dichter is a data scientist consultant for neuroscience labs. He focuses on building systems for sharing of data and analyses.
+I received my Ph.D. in Bioengineering from the [UC Berkeley - UCSF Joint Program in Bioengineering](http://bioegrad.berkeley.edu/), in [Dr. Edward Chang's lab](http://changlab.ucsf.edu/). There I used electrocorticography (ECoG) to study the neural control of speech in humans. Much of this work focused on how we control the pitch of our voice when we speak and sing. 
+
+I am now a data scientist consultant for neuroscience labs, and I focus on building systems for sharing of data and analyses.
 
 
-[curriculum vitae ![CV as pdf](icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/Dichter_cv.pdf)<br/>
-[orcid](http://orcid.org): [0000-0002-4914-6671](https://orcid.org/0000-0001-5725-6910)<br/>
-[google scholar](https://scholar.google.com/citations?user=_IwI_oEAAAAJ&hl=en&oi=ao)<br/>
-[impactstory](https://impactstory.org/u/0000-0002-4914-6671)
+[Curriculum Vitae ![CV as pdf](icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/Dichter_cv.pdf)<br/>
+[Ben Dichter's Google Scholar page](https://scholar.google.com/citations?user=_IwI_oEAAAAJ&hl=en&oi=ao)<br/>
 
 ---
 

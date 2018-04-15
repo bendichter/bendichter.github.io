@@ -2,6 +2,8 @@
 
 See [bendichter.com](http://bendichter.com).
 
+Site based on [http://kbroman.org/](http://kbroman.org/)
+
 ---
 
 My parts of this web site are licensed under
