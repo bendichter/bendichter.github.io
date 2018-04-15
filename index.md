@@ -24,7 +24,7 @@ keywords: data sharing, distributed neroscience, neuroscience, electrophysiology
   </td>
   <td class="right">
     <a href="https://github.com/ChangLabUcsf/larynx_control">
-        <img src="assets/pitch_fig.png" alt="Pitch paper" title="Pitch paper"/>
+        <img src="assets/bigpublpics/lx_control_cover_and_title.png" alt="Pitch paper" title="Pitch paper"/>
     </a>
   </td>
 </tr>
