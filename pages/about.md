@@ -2,7 +2,7 @@
 layout: page
 title: about
 ---
-I received my Ph.D. in Bioengineering from the UC Berkeley and UCSF Joint Program in Bioengineering, in [Dr. Edward Chang's lab](http://changlab.ucsf.edu/). There I used electrocorticography (ECoG) to study the neural control of speech in humans. Much of this work focused on how we control the pitch of our voice when we speak and sing. 
+I received my Ph.D. in Bioengineering from the [UC Berkeley - UCSF Joint Program in Bioengineering](http://bioegrad.berkeley.edu/), in [Dr. Edward Chang's lab](http://changlab.ucsf.edu/). There I used electrocorticography (ECoG) to study the neural control of speech in humans. Much of this work focused on how we control the pitch of our voice when we speak and sing. 
 
 I am now a data scientist consultant for neuroscience labs, and I focus on building systems for sharing of data and analyses.
 
