@@ -17,7 +17,7 @@ I am a neural data engineer working across labs and institutions to distribute a
   </td>
   <td class="right">
     <a href="https://github.com/bendichter/brokenaxes">
-        <img src="assets/broken_python_snake.png" alt="brokenaxes" title="brokenaxes"/>
+        <img src="assets/bigpublpics/brokenaxes.png" alt="brokenaxes" title="brokenaxes"/>
     </a>
   </td>
 </tr>
