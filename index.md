@@ -8,7 +8,7 @@ keywords: data sharing, distributed neroscience, neuroscience, electrophysiology
 <div class="navbar">
   <div class="navbar-inner">
       <ul class="nav">
-          <li><a href="assets/dichter_cv.pdf">cv</a></li>
+          <li><a href="assets/Dichter_cv.pdf">cv</a></li>
           <li><a href="https://github.com/bendichter">github</a></li>
           <li><a href="https://www.linkedin.com/in/bendichter/">linkedin</a></li>
           <li><a href="{{ site.baseurl }}/pages/about.html#contact">contact</a></li>
