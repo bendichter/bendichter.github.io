@@ -4,8 +4,6 @@ title: publications
 description: Ben Dichter's publications
 ---
 
-# Under Construction
-
 <div class="navbar">
     <div class="navbar-inner">
         <ul class="nav">
