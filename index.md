@@ -6,7 +6,7 @@ keywords: data sharing, distributed neroscience, neuroscience, electrophysiology
 ---
 I am a neural data engineer working across labs and institutions to distribute analytic tools and accelerate scientific discovery. My focus is building and distributing tools for more productive data sharing between labs.
 
-### Projects
+## Projects
 
 <table class="wide">
 <tr>
