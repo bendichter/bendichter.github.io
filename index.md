@@ -19,7 +19,7 @@ keywords: data sharing, distributed neroscience, neuroscience, electrophysiology
 <tr>
   <td class="left">
     <a href="https://github.com/bendichter/brokenaxes">
-        <img src="assets/brokenaxes_example.png" alt="brokenaxes example" title="brokenaxes"/>
+        <img src="assets/broken_python_snake.png" alt="brokenaxes" title="brokenaxes"/>
     </a>
   </td>
   <td class="right">
