@@ -6,9 +6,7 @@ Ben Dichter is a data scientist consultant for neuroscience labs. He focuses on 
 
 
 [curriculum vitae ![CV as pdf](icons16/pdf-icon.png)]({{ BASE_PATH }}/assets/Dichter_cv.pdf)<br/>
-[orcid](http://orcid.org): [0000-0002-4914-6671](https://orcid.org/0000-0001-5725-6910)<br/>
-[google scholar](https://scholar.google.com/citations?user=_IwI_oEAAAAJ&hl=en&oi=ao)<br/>
-[impactstory](https://impactstory.org/u/0000-0002-4914-6671)
+[Ben Dichter's Google Scholar page](https://scholar.google.com/citations?user=_IwI_oEAAAAJ&hl=en&oi=ao)<br/>
 
 ---
 
