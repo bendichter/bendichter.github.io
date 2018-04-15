@@ -14,7 +14,7 @@ I am a neural data engineer working across labs and institutions to distribute a
         <img src="assets/broken_python_snake.png" alt="brokenaxes" title="brokenaxes"/>
     </a>
   </td>
-  <td class="right">
+  <td class="right" width="50%">
     <a href="https://github.com/ChangLabUcsf/larynx_control">
         <img src="assets/bigpublpics/lx_control_cover_and_title.png" alt="Pitch paper" title="Pitch paper"/>
     </a>
