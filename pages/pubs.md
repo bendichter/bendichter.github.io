@@ -26,7 +26,7 @@ Jiang, W., Pailla, T., **Dichter, B.**, Chang, E. F., & Gilja, V. (2016, August)
 
 Pailla, T., Jiang, W., **Dichter, B.**, Chang, E. F., & Gilja, V. (2016, August). ECoG data analyses to inform closed-loop BCI experiments for speech-based prosthetic applications. In Engineering in Medicine and Biology Society (EMBC), 2016 IEEE 38th Annual International Conference of the (pp. 5713-5716). IEEE.
 
-**Dichter, B. K.**, Bouchard, K. E., & Chang, E. F. (2016). Dynamic structure of neural variability in the cortical representation of speech sounds. Journal of Neuroscience, 36(28), 7453-7463.
+**Dichter, B. K.**, Bouchard, K. E., & Chang, E. F. (2016). Dynamic structure of neural variability in the cortical representation of speech sounds. Journal of Neuroscience, 36(28), 7453-7463.[![pdf](icons16/pdf-icon.png)](http://www.jneurosci.org/content/36/28/7453.full.pdf)
 
 Bouchard, K. E., Conant, D. F., Anumanchipalli, G. K., **Dichter, B.**, Chaisanguanthum, K. S., Johnson, K., & Chang, E. F. (2016). High-resolution, non-invasive imaging of upper vocal tract articulators compatible with human brain recordings. PLoS One, 11(3), e0151327.[![pdf](icons16/pdf-icon.png)](http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0151327&type=printable)
 
