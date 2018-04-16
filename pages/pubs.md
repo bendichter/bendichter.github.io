@@ -31,7 +31,7 @@ Pailla, T., Jiang, W., **Dichter, B.**, Chang, E. F., & Gilja, V. (2016, August)
 Bouchard, K. E., Conant, D. F., Anumanchipalli, G. K., **Dichter, B.**, Chaisanguanthum, K. S., Johnson, K., & Chang, E. F. (2016). High-resolution, non-invasive imaging of upper vocal tract articulators compatible with human brain recordings. PLoS One, 11(3), e0151327.[![pdf](icons16/pdf-icon.png)](http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0151327&type=printable)
 
 #### 2015
-Makin, J. G., **Dichter, B. K.**, & Sabes, P. N. (2015). Learning to estimate dynamical state with probabilistic population codes. PLoS computational biology, 11(11), e1004554.
+Makin, J. G., **Dichter, B. K.**, & Sabes, P. N. (2015). Learning to estimate dynamical state with probabilistic population codes. PLoS computational biology, 11(11), e1004554.[![pdf](icons16/pdf-icon.png)](http://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1004554&type=printable)
 
 #### 2014
 Conant, D. F., Bouchard, K. E., Gopala, A. K., **Dichter, B.**, & Chang, E. F. (2014). A multi-modal imaging system for simultaneous measurement of speech articulator kinematics for bedside applications in clinical settings. The Journal of the Acoustical Society of America, 136(4), 2104-2104.
