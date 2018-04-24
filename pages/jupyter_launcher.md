@@ -3,7 +3,7 @@ layout: page
 title: Make Jupyter Notebooks Double-clickable
 ---
 
-If you use jupyter as much as I do, the steps to run a notebook are probably second nature, but if you take a step back, it involves a lot of prior knowledge. A few times I've tried to bring brand new eager programmers into the glorious land of python and jupyter, but each time I found that the whole flow was really bogged down my this extensive preamble that is pretty technical. I'll give them an .ipynb file and then show them how to open it
+If you use jupyter as much as I do, the steps to run a notebook are probably second nature, but if you take a step back, it involves a lot of prior knowledge. A few times I've tried to bring brand new eager programmers into the glorious land of python and jupyter, but each time I found that the whole flow was really bogged down by this preamble that is pretty technical. I'll give them an .ipynb file and then show them how to open it
 
 1) Open Terminal (What's Terminal? It looks scary.) 
 
