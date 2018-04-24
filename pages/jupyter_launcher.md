@@ -9,15 +9,15 @@ and **finally** you are in the user-friendly land of Jupyter.
 
 Now of course all of these skills are useful, and necessary eventually, but it really bogs down the first lesson in minutia and inevitably leaves the student feeling a bit dazed and out of control. There must be a better way! One solution is to set your student of with Jupyter Hub. They'll just need to click a link and they'll be up and running in no time! This is a great solution for a lot of cases, but it requires the instructor to set up a server and the student to have internet access, so this doesn't fit all cases. "Why can't I just double click the notebook?" the student will ask (or be too embarrassed to ask). Well... um... why can't you? Now you can. Here's how.
 
-[Download me!](../assets/run_jupyter_notebook.zip)
+<a href="../assets/run_jupyter_notebook.zip" target="_blank">Download me!</a>
 
 Double-click to unpack.
 
-Drag to Applications or whereever you want to keep it.
+Drag to Applications or where ever you want to keep it.
 
 Navigate to a notebook in Finder, right-click and choose "Get Info", then expand "Open with:" choose "Other..." from the dropdown menu. Now navigate to and select run_jupyter_notebook. Now select "Change All..." 
 
-<img src="../assets/run_jupyter_notebook.png" title="change jupyter notebook settings" alt="change notebook settings"/>
+<img width="300" src="../assets/run_jupyter_notebook.png" title="change jupyter notebook settings" alt="change notebook settings"/>
 
 Now you can double-click your notebooks to start them!
 
@@ -25,6 +25,6 @@ Now you can double-click your notebooks to start them!
 
 * This only works on Macs right now (sorry Windows. Linux users, y'all chose this life.)
 * Every time you double-click, it opens a new Terminal window.
-* You can't run an environment
+* This won't run a notebook in a virtual environment.
 
 But none of these caveats should stop you, because you can still open jupyter notebooks the old way!
