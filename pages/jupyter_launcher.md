@@ -1,4 +1,4 @@
-# Making it easy to launch a jupyter notebook
+## Making it easy to launch a jupyter notebook
 
 If you use jupyter as much as I do, this steps to run a notebook are probably second nature, but if you take a step back, it involves a lot of prior knowledge. A few times I've tried to bring brand new eager programmers into the glorious land of python and jupyter, but each time I found that the whole flow was really bogged down my this extensive preamble that is pretty technical.
 
@@ -17,7 +17,7 @@ Drag to Applications or where ever you want to keep it.
 
 Navigate to a notebook in Finder, right-click and choose "Get Info", then expand "Open with:" choose "Other..." from the dropdown menu. Now navigate to and select run_jupyter_notebook. Now select "Change All..." 
 
-<img width="300" src="../assets/run_jupyter_notebook.png" title="change jupyter notebook settings" alt="change notebook settings"/>
+<img width="200" src="../assets/run_jupyter_notebook.png" title="change jupyter notebook settings" alt="change notebook settings"/>
 
 Now you can double-click your notebooks to start them!
 
