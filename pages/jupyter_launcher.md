@@ -11,9 +11,7 @@ and **finally** you are in the user-friendly land of Jupyter.
 
 Now of course all of these skills are useful, and necessary eventually, but it really bogs down the first lesson in minutia and inevitably leaves the student feeling a bit dazed and out of control. There must be a better way! One solution is to set your student of with Jupyter Hub. They'll just need to click a link and they'll be up and running in no time! This is a great solution for a lot of cases, but it requires the instructor to set up a server and the student to have internet access, so this doesn't fit all cases. "Why can't I just double click the notebook?" the student will ask (or be too embarrassed to ask). Well... um... why can't you? Now you can. Here's how.
 
-[Download me!](../assets/run_jupyter_notebook.zip)
-
-Double-click to unpack.
+[Download me!](../assets/run_jupyter_notebook.zip) and double-click to unpack.
 
 Drag to Applications or where ever you want to keep it.
 
