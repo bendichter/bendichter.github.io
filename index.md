@@ -23,6 +23,7 @@ I am a neural data engineer working across labs and institutions to distribute a
 </tr>
 </table>
 
+### Check out my [Jupyter notebook launcher]({{ site.baseurl }}/pages/jupyter_launcher.html)!
 
 <div class="navbar">
   <div class="navbar-inner">
