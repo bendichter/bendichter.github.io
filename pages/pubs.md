@@ -17,7 +17,7 @@ description: Ben Dichter's publications
 ### <a name="articles"></a>journal articles
 
 #### 2018
-**Dichter, B.K.**, Breshears, J.D., Leonard M.K., Chang, E.F., (2018). The Control of Vocal Pitch in Human Laryngeal Motor Cortex. Cell, 174(1), 21-31.
+**Dichter, B.K.**, Breshears, J.D., Leonard, M.K., Chang, E.F., (2018). The Control of Vocal Pitch in Human Laryngeal Motor Cortex. Cell, 174(1), 21-31.
 [![PubMed](icons16/pubmed-icon.png)](https://www.ncbi.nlm.nih.gov/pubmed/29958109)
 
 #### 2016
