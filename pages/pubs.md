@@ -16,8 +16,12 @@ description: Ben Dichter's publications
 
 ### <a name="articles"></a>journal articles
 
+#### 2018
+**Dichter, B.K.**, Breshears, J.D., Leonard M.K., Chang, E.F., (2017). The Control of Vocal Pitch in Human Laryngeal Motor Cortex. Cell, 174(1), 21-31.
+[![PubMed](icons16/pubmed-icon.png)](https://www.ncbi.nlm.nih.gov/pubmed/29958109)
+
 #### 2016
-**Dichter, B. K.**, Bouchard, K. E., & Chang, E. F. (2016). Dynamic structure of neural variability in the cortical representation of speech sounds. Journal of Neuroscience, 36(28), 7453-7463.[![pdf](icons16/pdf-icon.png)](http://www.jneurosci.org/content/36/28/7453.full.pdf)
+**Dichter, B.K.**, Bouchard, K. E., & Chang, E. F. (2016). Dynamic structure of neural variability in the cortical representation of speech sounds. Journal of Neuroscience, 36(28), 7453-7463.[![pdf](icons16/pdf-icon.png)](http://www.jneurosci.org/content/36/28/7453.full.pdf)
 
 Godlove, J., Gulati, T., **Dichter, B.**, Chang, E., & Ganguly, K. (2016). Muscle synergies after stroke are correlated with perilesional high gamma. Annals of clinical and translational neurology, 3(12), 956-961.
 [![PubMed](icons16/pubmed-icon.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5224817/)
