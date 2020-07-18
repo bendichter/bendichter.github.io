@@ -8,7 +8,7 @@ author_profile: true
 ### 2020
 
 <p>
-<a href="https://www.ncbi.nlm.nih.gov/pubmed/29958109">
+<a href="https://www.nature.com/articles/s41597-020-0415-9">
 <b>A NWB-based dataset and processing pipeline of human single-neuron activity during a declarative memory task</b></a><br>
 <i>Scientific Data (2020)</i><br>
 Chandravadia, N., Liang, D., Schjetnan, A.G.P., Carlson A., Faraut M., Chung J.M., Reed C.M., <b>Dichter, B.</b>, Maoz, U., Kalia S.K., Valiante, T.A., Mamelak, A.N., Rutishauser U. 
