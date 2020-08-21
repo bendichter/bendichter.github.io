@@ -18,12 +18,12 @@ change_tense('I will go to the store.', 'past')
 u'I went to the store.'
 ```
 
-Little did past-Ben know, this is a really tough task, for a few reasons. For anyone who wants to venture down this path,
+Little did I know, this is a really tough task, for a few reasons. For anyone who wants to venture down this path,
 here are a few of the finer points you'll need to deal with:
 1. Identifying verbs is harder than it looks. For instance, take the word "<u>vacuum</u>." This word could be used as a noun,
 ("Please hand me the <u>vacuum</u>.") or verb ("Please <u>vacuum</u> the dining room.") Vacuum is not a special word-
 in fact if you think about it, **most** verbs in the English language can be used as nouns and **most** nouns can be used as verbs.
-If you blindly convert any word that could be a verb, you'll get nonsense like "Please <u>vacuumed</u> the dining room."
+If you blindly convert any word that could be a verb, you'll get nonsense like "Please hand me the <u>vacuumed</u>."
 Therefore, in order to properly tense-alter a passage, you need to first parse the sentence to determine what words are
 are being used as verbs. You also need to parse their role in the sentence. For instance, infinitives do not change with
 tense. (We don't want e.g. "You asked me to <u>vacuumed</u>)".
