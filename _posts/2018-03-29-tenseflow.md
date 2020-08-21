@@ -31,10 +31,12 @@ tense. (We don't want e.g. "You asked me to <u>vacuumed</u>)".
 really need an entire dictionary to do this properly.
 3. There are more tenses in English than you might realize. Common wisdom is that we have 3: past, present, and future.
 In fact, there are 12, and each of them has three modes: affirmative, negative, and interrogative.
+
+<img width="400" src="https://lessonsforenglish.com/wp-content/uploads/2019/12/12-Tenses-Formula-With-Examples.png" title="table of tenses" alt="table of tenses"/>
+
 4. There are all sorts of cases where you would want to have multiple tenses in the same sentence, and there isn't really
 a good way to infer this automatically.
 
-<img width="400" src="https://lessonsforenglish.com/wp-content/uploads/2019/12/12-Tenses-Formula-With-Examples.png" title="table of tenses" alt="table of tenses"/>
 
 Despite these obstacles, I managed to make a tool that works... OK. It comes with a web-app.
 Check it out on GitHub [here](https://github.com/bendichter/tenseflow).
