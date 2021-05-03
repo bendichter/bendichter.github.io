@@ -19,4 +19,4 @@ I received my Ph.D. in Bioengineering from the [UC Berkeley - UCSF Joint Program
 There, I used electrocorticography (ECoG) to study the neural control of speech in humans.
 Much of this work focused on how we control the pitch of our voice when we speak and sing.
 
-I did my undergraduate work at the University of Pittsburgh, and I learned many of the skills I still use on a regular basis in the [SMILE lab](https://smile.pitt.edu/) under the supervision of Dr. Aaron Batista.  
+I did my undergraduate work at the University of Pittsburgh, in the [SMILE lab](https://smile.pitt.edu/) under the supervision of Dr. Aaron Batista. I learned how to design probbablilstic models of neural activity, which guides my thinking about neural data analysis to this day.
