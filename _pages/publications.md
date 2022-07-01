@@ -77,7 +77,7 @@ Holdgraf, C., Appelhoff, S., Bickel, S., Bouchard, K., D’Ambrosio, S., David, 
 Ruebel, O., Tritt, A., <b>Dichter, B.</b>, Braun, T., Cain, N., Clack, N., Davidson, T.J., Dougherty, M., Fillion-Robin, J.C., Graddis, N. and Grauer, M.</p>
 
 
-#### 2018
+### 2018
 
 <p>
 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29958109">
@@ -87,7 +87,7 @@ Ruebel, O., Tritt, A., <b>Dichter, B.</b>, Braun, T., Cain, N., Clack, N., David
 </p>
 
 
-#### 2016
+### 2016
 
 <p>
 <a href="http://www.jneurosci.org/content/36/28/7453.full.pdf">
