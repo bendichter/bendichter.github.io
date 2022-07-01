@@ -5,6 +5,33 @@ permalink: /publications/
 author_profile: true
 ---
 
+### 2022
+
+<p>
+  <a href="https://www.nature.com/articles/s41597-022-01280-y">
+    <b>AJILE12: Long-term naturalistic human intracranial neural recordings and pose</b></a><br>
+  <i>Scientific data (2022)</i><br>
+  SM Peterson, SH Singh, <b>B Dichter</b>, M Scheid, RPN Rao, BW Brunton
+</p>
+
+
+### 2021
+
+<p>
+  <a href="https://www.nature.com/articles/s41597-020-0415-9](https://osf.io/mwh2b/download">
+    <b>Pan-neuro: Interactive computing at scale with BRAIN dataset</b></a><br>
+  <i>OSF Preprints (2021)</i><br>
+  A Rokem, <b>B Dichter</b>, C Holdgraf, S Ghosh
+</p> 
+
+
+<p>
+  <a href="https://www.biorxiv.org/content/biorxiv/early/2022/03/29/2021.03.13.435173.full.pdf">
+    <b>The Neurodata Without Borders ecosystem for neurophysiological data science</b></a><br>
+  <i>boiRxiv (2021)</i><br>
+  Oliver Rübel, Andrew Tritt, Ryan Ly, <b>Benjamin K. Dichter</b>, Satrajit Ghosh, Lawrence Niu, Ivan Soltesz, Karel Svoboda, Loren Frank, Kristofer E. Bouchard
+</p>  
+
 ### 2020
 
 <p>
