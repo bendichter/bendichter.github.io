@@ -28,7 +28,8 @@ is the google trend for "gifts" shown as a spiral plot:
 
 ![img_1.png](./img_1.png)
 
-The drawback of this approach is that earlier years are much smaller
+This plot is more compact than the line version and may highlight some trends
+more clearly. The drawback of this approach is that earlier years are smaller
 than more recent years. You can make this less dramatic by giving the circle an
 empty center (setting `origin=-2`).
 
