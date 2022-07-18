@@ -21,13 +21,13 @@ from typing import List, Optional
 
 
 def grouped_barplot(
-        data,
-        clabels: List[str],
-        xlabels: List[str],
-        gap: float = 0.3,
-        show_legend: bool = True,
-        show_bar_labels: bool = True,
-        ax: Optional[plt.Axes] = None,
+    data,
+    clabels: List[str],
+    xlabels: List[str],
+    gap: float = 0.3,
+    show_legend: bool = True,
+    show_bar_labels: bool = True,
+    ax: Optional[plt.Axes] = None,
 ):
     """
     
