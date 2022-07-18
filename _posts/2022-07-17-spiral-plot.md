@@ -26,7 +26,7 @@ Each year of time forms a ring around the spiral so that a given angle
 of the circle has data from the same time of year on every loop. Here
 is the google trend for "gifts" shown as a spiral plot:
 
-![img_1.png](img_1.png)
+![img_1.png](./img_1.png)
 
 The drawback of this approach is that earlier years are much smaller
 than more recent years. You can make this less dramatic by giving the circle an
