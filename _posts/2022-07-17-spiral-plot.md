@@ -8,8 +8,9 @@ tags:
 ---
 
 Let's use for example Google Trends results for the search term "gifts."
+Google offers this plot:
 
-![img.png](img.png)
+![gifts google trends plot](img.png)
 
 It should be no surprise that these results show a cyclical trend
 and it looks like this might be an annual cycle with the max around 
@@ -26,14 +27,14 @@ Each year of time forms a ring around the spiral so that a given angle
 of the circle has data from the same time of year on every loop. Here
 is the google trend for "gifts" shown as a spiral plot:
 
-![img_1.png](./img_1.png)
+![gifts spiral plot with no donut](./img_1.png){:class="img-responsive"}
 
 This plot is more compact than the line version and may highlight some trends
 more clearly. The drawback of this approach is that earlier years are smaller
 than more recent years. You can make this less dramatic by giving the circle an
 empty center (setting `origin=-2`).
 
-![img_3.png](img_3.png)
+![gifts spiral plot](img_3.png)
 
 Code:
 
