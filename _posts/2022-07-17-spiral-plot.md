@@ -20,21 +20,20 @@ you to break the year at a certain point, breaking continuous data and
 potentially creating the impression of two different spikes when there
 is really just one.
 
-
 I have created way to plot cyclic that I call a "spiral plot."
 The data starts at the center of a circle and proceeds out in a spiral.
 Each year of time forms a ring around the spiral so that a given angle 
 of the circle has data from the same time of year on every loop. Here
 is the google trend for "gifts" shown as a spiral plot:
 
-![gifts spiral plot with no donut](img_1.png){:class="img-responsive"}
+![gifts spiral plot with no donut](../../images/spiral_plot_no_donut.png)
 
 This plot is more compact than the line version and may highlight some trends
 more clearly. The drawback of this approach is that earlier years are smaller
 than more recent years. You can make this less dramatic by giving the circle an
 empty center (setting `origin=-2`).
 
-![gifts spiral plot](img_3.png)
+![gifts spiral plot](../../images/spiral_plot_w_donut.png)
 
 Code:
 
