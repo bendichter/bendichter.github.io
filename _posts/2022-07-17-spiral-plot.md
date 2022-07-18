@@ -10,10 +10,10 @@ tags:
 Let's use for example Google Trends results for the search term "gifts."
 Google offers this plot:
 
-![gifts google trends plot](img.png)
+![gifts-google-trends-plot](../../images/google_trends_gifts.png)
 
-It should be no surprise that these results show a cyclical trend
-and it looks like this might be an annual cycle with the max around 
+It should be no surprise that these results show a cyclical trend. It looks 
+like this might be an annual cycle with the max around 
 Christmas time. It can be hard to create visualizations that bring out
 this cyclic pattern. Stacking years on top of each other will require
 you to break the year at a certain point, breaking continuous data and
