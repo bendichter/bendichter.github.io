@@ -114,4 +114,4 @@ git_timesheet(
 )
 ```
 
-![git-timesheet](../../git-timesheet.png)
+![git-timesheet](../../images/git-timesheet.png)

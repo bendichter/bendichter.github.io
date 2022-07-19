@@ -120,4 +120,4 @@ ax.axvline(datetime.now(), ls='--', color=[.5, .5, .5])
 ax.set_ylim((0, 12.5))
 ```
 
-![stacked step plot](../../stacked_step_plot.png)
+![stacked step plot](../../images/stacked_step_plot.png)
