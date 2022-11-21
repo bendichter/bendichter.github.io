@@ -8,6 +8,13 @@ author_profile: true
 ### 2022
 
 <p>
+  <a href="https://elifesciences.org/articles/78362">
+    <b>The Neurodata Without Borders ecosystem for neurophysiological data science</b></a><br>
+  <i>eLife (2022)</i><br>
+  O Ruebel, A Tritt, R Ly, <b>B Dichter</b>, S Ghosh, L Niu, P Baker, I Soltesz, L Ng
+</p>
+
+<p>
   <a href="https://www.nature.com/articles/s41597-022-01280-y">
     <b>AJILE12: Long-term naturalistic human intracranial neural recordings and pose</b></a><br>
   <i>Scientific data (2022)</i><br>
