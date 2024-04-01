@@ -13,8 +13,6 @@ I built a new tool! [Code crafter](https://github.com/bendichter/code-crafter) i
 Starting with a file named `my_file.py` that contains the following code:
 
 ```python
-# my_file.py
-
 my_list = [1, 2, 3]
 my_dict = {"key1": "value1", "key2": "value2"}
 my_set = {1, 2, 3}
@@ -39,7 +37,6 @@ with cc.File("my_file.py") as file:
 After running the above code, the file `my_file.py` will be updated to:
 
 ```python
-# my_file.py
 my_list = [1, 2, 3, 4]
 my_dict = {"key1": "value1", "key2": "value2", "my_new_key": "my_new_value"}
 my_set = {1, 2, 3, 42}
