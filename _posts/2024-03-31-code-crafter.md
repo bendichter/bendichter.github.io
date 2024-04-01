@@ -1,9 +1,13 @@
 ---
-title: 'code-crafter'
-date: 2018-03-29
+title: 'The new Code Crafter package for Python AST transformations'
+date: 2024-03-31
 permalink: /posts/2024-03-31-code-crafter
 tags:
 - python
+- code-crafter
+- ast
+- code-generation
+- code-manipulation
 ---
 
 I built a new tool! [Code crafter](https://github.com/bendichter/code-crafter) is a Python library designed for manipulating Python source code through Abstract Syntax Tree (AST) transformations. This tool simplifies the process of programmatically editing Python code, allowing developers to find and modify specific data structures such as lists, dictionaries, and sets within their code.
@@ -13,8 +17,6 @@ I built a new tool! [Code crafter](https://github.com/bendichter/code-crafter) i
 Starting with a file named `my_file.py` that contains the following code:
 
 ```python
-# my_file.py
-
 my_list = [1, 2, 3]
 my_dict = {"key1": "value1", "key2": "value2"}
 my_set = {1, 2, 3}
@@ -39,7 +41,6 @@ with cc.File("my_file.py") as file:
 After running the above code, the file `my_file.py` will be updated to:
 
 ```python
-# my_file.py
 my_list = [1, 2, 3, 4]
 my_dict = {"key1": "value1", "key2": "value2", "my_new_key": "my_new_value"}
 my_set = {1, 2, 3, 42}
@@ -74,5 +75,5 @@ These transformations also work for code that contains calls to `list()`, `dict(
 ## How it works
 `code_crafter` uses the `ast` module to parse Python code into an Abstract Syntax Tree (AST). The AST is then traversed to find and modify the desired data structures. Finally, the modified AST is converted back into Python code. Because the code is entirely generated from the AST, no formatting is preserved. Code can be rendered either according to the default Python AST formatting or using the `black` code formatter.
 
-This tool is useful for developers who need to programmatically edit Python code, such as when writing code generators or refactoring tools. Check it out on GitHub [here]((https://github.com/bendichter/code-crafter).
+This tool is useful for developers who need to programmatically edit Python code, such as when writing code generators or refactoring tools. Check it out on GitHub [here](https://github.com/bendichter/code-crafter).
 
