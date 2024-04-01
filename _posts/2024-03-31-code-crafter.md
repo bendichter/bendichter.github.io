@@ -1,5 +1,5 @@
 ---
-title: 'code-crafter'
+title: 'The new Code Crafter package for Python AST transformations'
 date: 2024-03-31
 permalink: /posts/2024-03-31-code-crafter
 tags:
