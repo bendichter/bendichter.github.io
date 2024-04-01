@@ -10,7 +10,7 @@ tags:
 - code-manipulation
 ---
 
-I built a new tool! [Code crafter](https://github.com/bendichter/code-crafter) is a Python library designed for manipulating Python source code through Abstract Syntax Tree (AST) transformations. This tool simplifies the process of programmatically editing Python code, allowing developers to find and modify specific data structures such as lists, dictionaries, and sets within their code.
+I built a new tool! [Code Crafter](https://github.com/bendichter/code-crafter) is a Python library designed for manipulating Python source code through Abstract Syntax Tree (AST) transformations. This tool simplifies the process of programmatically editing Python code, allowing developers to find and modify specific data structures such as lists, dictionaries, and sets within their code.
 
 ## Basic Usage
 
