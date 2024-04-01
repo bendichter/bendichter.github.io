@@ -74,5 +74,5 @@ These transformations also work for code that contains calls to `list()`, `dict(
 ## How it works
 `code_crafter` uses the `ast` module to parse Python code into an Abstract Syntax Tree (AST). The AST is then traversed to find and modify the desired data structures. Finally, the modified AST is converted back into Python code. Because the code is entirely generated from the AST, no formatting is preserved. Code can be rendered either according to the default Python AST formatting or using the `black` code formatter.
 
-This tool is useful for developers who need to programmatically edit Python code, such as when writing code generators or refactoring tools. Check it out on GitHub [here]((https://github.com/bendichter/code-crafter).
+This tool is useful for developers who need to programmatically edit Python code, such as when writing code generators or refactoring tools. Check it out on GitHub [here](https://github.com/bendichter/code-crafter).
 
