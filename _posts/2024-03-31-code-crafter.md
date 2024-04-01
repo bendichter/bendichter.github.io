@@ -1,6 +1,6 @@
 ---
 title: 'code-crafter'
-date: 2018-03-29
+date: 2024-03-31
 permalink: /posts/2024-03-31-code-crafter
 tags:
 - python
