@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Ben Dichter"
-  avatar           : "profile.png"
-  bio              : "Neuro-data scientist and Founder of <a href=\"https://catalystneuro.com\">CatalystNeuro</a>."
+  avatar           : "profile.jpeg"
+  bio              : "Research Software Engineer and Founder of <a href=\"https://catalystneuro.com\">CatalystNeuro</a>."
   location         :
   employer         :
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Dichter+B&cauthor_id=28269552"
