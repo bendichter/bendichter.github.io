@@ -115,6 +115,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  bluesky          : bendichter.com
 
 
 # Reading Files
@@ -122,6 +123,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - .well-known
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
