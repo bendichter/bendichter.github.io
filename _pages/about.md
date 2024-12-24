@@ -8,18 +8,33 @@ redirect_from:
   - /about.html
 ---
 
-I am the Founder of [CatalystNeuro](http://catalystneuro.com), a consulting and software development company that facilitates collaboration in neuroscience.
-We believe that the future of neuroscience will be driven by collaboration between labs. Our mission is to develop channels of communication and distribution of resources between labs to enable exponential growth and innovation. We are at the forefront of this effort, shaping the way data, analysis and visualization tools are standardized and shared across the international community of systems neuroscientists. We ensure that these tools accelerate scientific discovery by working in parallel with neuroscientists and work with them to enhance the tools they already use.
+I am a Research Software Engineer and the Founder of [CatalystNeuro](http://catalystneuro.com), where I work to transform how neuroscience labs collaborate and share data.
 
-I have been fortunate enough to find a team of like-minded neuroscientists and software developers, and together we are finding ways to contribute to the field outside of the standard academic path.
-I am a strong advocate for non-traditional paths in science. If you are curious about carving your own path and you want to learn how others have done it, feel free to contact me via email.
+## Vision & Work
+
+At CatalystNeuro, we're revolutionizing neuroscience collaboration through better data standardization and tool sharing. Our work focuses on:
+
+- Developing standardized data formats for neuroscience
+- Creating tools for seamless data sharing between labs
+- Building bridges between different analysis platforms
+- Consulting with labs to optimize their data workflows
+
+We believe the future of neuroscience lies in open collaboration, and we're actively shaping how data and tools are shared across the international neuroscience community.
 
 ## Background
-I received my Ph.D. in Bioengineering from the [UC Berkeley - UCSF Joint Program in Bioengineering](http://bioegrad.berkeley.edu/), in [Dr. Edward Chang's lab](http://changlab.ucsf.edu/).
-There, I used electrocorticography (ECoG) to study the neural control of speech in humans.
-Much of this work focused on how we control the pitch of our voice when we speak and sing.
 
-During my undergraduate at the University of Pittsburgh, I studied in in the [SMILE lab](https://smile.pitt.edu/) under the supervision of [Dr. Aaron Batista](https://www.engineering.pitt.edu/AaronBatista/). I learned how to design probbablilstic models of neural activity, which guides my thinking about neural data analysis to this day.
+I received my Ph.D. in Bioengineering from the [UC Berkeley - UCSF Joint Program in Bioengineering](http://bioegrad.berkeley.edu/), working in [Dr. Edward Chang's lab](http://changlab.ucsf.edu/). My research focused on using electrocorticography (ECoG) to understand speech control in humans, particularly the neural mechanisms of voice pitch control in speaking and singing.
 
-## Hobbies
-I love to travel and dance West Coast Swing.
+During my undergraduate years at the University of Pittsburgh's [SMILE lab](https://smile.pitt.edu/) under [Dr. Aaron Batista](https://www.engineering.pitt.edu/AaronBatista/), I developed probabilistic models of neural activity. This early work shaped my approach to neural data analysis and eventually led to my interest in standardizing data practices across the field.
+
+## Alternative Paths in Science
+
+I'm passionate about exploring non-traditional careers in science. Through CatalystNeuro, I've found a way to contribute to neuroscience beyond the conventional academic path. I work with a talented team of neuroscientists and software developers who share this vision.
+
+If you're interested in exploring alternative careers in science or want to learn about different paths, feel free to reach out. I'm always happy to share experiences and discuss possibilities.
+
+## Beyond the Lab
+
+When not working on neuroscience data, I enjoy:
+- Dancing West Coast Swing
+- Traveling and exploring new cultures

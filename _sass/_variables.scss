@@ -13,9 +13,9 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
 /* system typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+$serif                      : "Source Serif Pro", "Merriweather", Georgia, Times, serif;
+$sans-serif                 : "Inter", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace                  : "JetBrains Mono", Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
@@ -32,15 +32,21 @@ $global-font-family         : $sans-serif;
 $header-font-family         : $sans-serif;
 $caption-font-family        : $serif;
 
-/* type scale */
-$type-size-1                : 2.441em;  // ~39.056px
-$type-size-2                : 1.953em;  // ~31.248px
-$type-size-3                : 1.563em;  // ~25.008px
-$type-size-4                : 1.25em;   // ~20px
+/* type scale - more conservative sizes */
+$type-size-1                : 2.074em;  // ~33.2px
+$type-size-2                : 1.728em;  // ~27.6px
+$type-size-3                : 1.44em;   // ~23px
+$type-size-4                : 1.2em;    // ~19.2px
 $type-size-5                : 1em;      // ~16px
-$type-size-6                : 0.75em;   // ~12px
-$type-size-7                : 0.6875em; // ~11px
-$type-size-8                : 0.625em;  // ~10px
+$type-size-6                : 0.875em;  // ~14px
+$type-size-7                : 0.813em;  // ~13px
+$type-size-8                : 0.75em;   // ~12px
+
+/* vertical rhythm */
+$line-height-base           : 1.6;
+$line-height-heading        : 1.2;
+$letter-spacing-base        : 0.01em;
+$letter-spacing-heading     : -0.02em;
 
 /* masthead properties */
 $masthead-height            : 70px;
@@ -76,7 +82,7 @@ $info-color                 : #2f7f93;
 
 /* brands */
 $behance-color              : #1769FF;
-$bluesky-color              : #1184fe;
+$bluesky-color             : #1184fe;  // Bluesky's official blue color
 $dribbble-color             : #ea4c89;
 $facebook-color             : #3b5998;
 $flickr-color               : #ff0084;
