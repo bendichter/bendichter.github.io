@@ -8,7 +8,7 @@ author_profile: true
 ### 2025
 
 <p>
-  <a href="#">
+  <a href="https://doi.org/10.1016/j.crmeth.2024.100964">
     <b>Unifying community whole-brain imaging datasets enables robust neuron identification and reveals determinants of neuron position in C. elegans</b></a><br>
   <i>Cell Reports Methods (2025)</i><br>
   DY Sprague, K Rusch, RL Dunn, JM Borchardt, S Ban, G Bubnis, GC Chiu, ..., <b>B Dichter</b>, ...
