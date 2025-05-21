@@ -5,6 +5,68 @@ permalink: /publications/
 author_profile: true
 ---
 
+### 2025
+
+<p>
+  <a href="https://doi.org/10.1016/j.crmeth.2024.100964">
+    <b>Unifying community whole-brain imaging datasets enables robust neuron identification and reveals determinants of neuron position in C. elegans</b></a><br>
+  <i>Cell Reports Methods (2025)</i><br>
+  DY Sprague, K Rusch, RL Dunn, JM Borchardt, S Ban, G Bubnis, GC Chiu, ..., <b>B Dichter</b>, ...
+</p>
+
+### 2024
+
+<p>
+  <a href="https://arxiv.org/abs/2406.00063">
+    <b>Methods for Linking Data to Online Resources and Ontologies with Applications to Neurophysiology</b></a><br>
+  <i>arXiv preprint arXiv:2406.00063 (2024)</i><br>
+  M Avaylon, R Ly, A Tritt, <b>B Dichter</b>, KE Bouchard, CJ Mungall, O Ruebel
+</p>
+
+<p>
+  <a href="https://joss.theoj.org/papers/10.21105/joss.06590">
+    <b>Neurosift: DANDI exploration and NWB visualization in the browser</b></a><br>
+  <i>Journal of Open Source Software 9 (97), 6590 (2024)</i><br>
+  J Magland, J Soules, C Baker, <b>B Dichter</b>
+</p>
+
+<p>
+  <a href="https://www.eneuro.org/content/11/2/ENEURO.0492-23.2023">
+    <b>A modular implementation to handle and benchmark drift correction for high-density extracellular recordings</b></a><br>
+  <i>Eneuro 11 (2) (2024)</i><br>
+  S Garcia, C Windolf, J Boussard, <b>B Dichter</b>, AP Buccino, P Yger
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2401.00077">
+    <b>SciOps: achieving productivity and reliability in data-intensive research</b></a><br>
+  <i>arXiv preprint arXiv:2401.00077 (2024)</i><br>
+  EC Johnson, TT Nguyen, <b>BK Dichter</b>, F Zappulla, M Kosma, K Gunalan, ...
+</p>
+
+### 2023
+
+<p>
+  <a href="https://arxiv.org/abs/2401.00077v1">
+    <b>A maturity model for operations in neuroscience research</b></a><br>
+  <i>arXiv preprint arXiv:2401.00077 (2023)</i><br>
+  EC Johnson, TT Nguyen, <b>BK Dichter</b>, F Zappulla, M Kosma, K Gunalan, ...
+</p>
+
+<p>
+  <a href="https://www.nature.com/articles/s41597-023-02596-z">
+    <b>A comparison of neuroelectrophysiology databases</b></a><br>
+  <i>Scientific data 10 (1), 719 (2023)</i><br>
+  P Subash, A Gray, M Boswell, SL Cohen, R Garner, S Salehi, C Fisher, ..., <b>B Dichter</b>, ...
+</p>
+
+<p>
+  <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002133">
+    <b>A guide to the BRAIN Initiative Cell Census Network data ecosystem</b></a><br>
+  <i>PLoS biology 21 (6), e3002133 (2023)</i><br>
+  M Hawrylycz, ME Martone, GA Ascoli, JG Bjaalie, HW Dong, SS Ghosh, ..., <b>B Dichter</b>, ...
+</p>
+
 ### 2022
 
 <p>
