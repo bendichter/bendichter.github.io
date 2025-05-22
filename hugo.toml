@@ -1,7 +1,7 @@
 baseURL = "https://bendichter.com"
 languageCode = "en-us"
 title = "Ben Dichter"
-theme = ""
+# theme = ""
 
 [params]
   name = "Dr. Benjamin Dichter"
