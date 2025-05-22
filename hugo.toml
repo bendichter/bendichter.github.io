@@ -1,0 +1,59 @@
+baseURL = "https://bendichter.com"
+languageCode = "en-us"
+title = "Ben Dichter"
+# theme = ""
+
+[params]
+  name = "Dr. Benjamin Dichter"
+  description = "Neuro-data scientist passionate about open data"
+  avatar = "profile.jpeg"
+  bio = "Research Software Engineer and Founder of <a href=\"https://catalystneuro.com\">CatalystNeuro</a>."
+  email = "ben.dichter@catalystneuro.com"
+  
+  # Social links
+  github = "bendichter"
+  twitter = "BenDichter"
+  bluesky = "bendichter.com"
+  orcid = "http://orcid.org/0000-0001-5725-6910"
+  pubmed = "https://pubmed.ncbi.nlm.nih.gov/?term=Dichter+B&cauthor_id=28269552"
+  googlescholar = "https://scholar.google.com/citations?user=_IwI_oEAAAAJ"
+  stackoverflow = "2559070/ben-dichter"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 20
+  [[menu.main]]
+    name = "Talks"
+    url = "/talks/"
+    weight = 30
+  [[menu.main]]
+    name = "Teaching"
+    url = "/teaching/"
+    weight = 40
+  [[menu.main]]
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 50
+  [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 60
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[permalinks]
+  posts = "/:title/"

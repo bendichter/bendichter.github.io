@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="author" content="{{ .Site.Params.name }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | relURL }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ "/favicon.ico" | relURL }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav">
+                <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
+                <ul class="nav-links">
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+            {{ block "main" . }}{{ end }}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="author-profile">
+                    <img src="{{ printf "/images/%s" .Site.Params.avatar | relURL }}" alt="{{ .Site.Params.name }}" class="avatar">
+                    <div class="author-info">
+                        <h3>{{ .Site.Params.name }}</h3>
+                        <p>{{ .Site.Params.bio | safeHTML }}</p>
+                        <div class="social-links">
+                            {{ if .Site.Params.email }}
+                            <a href="mailto:{{ .Site.Params.email }}" title="Email">✉️</a>
+                            {{ end }}
+                            {{ if .Site.Params.github }}
+                            <a href="https://github.com/{{ .Site.Params.github }}" title="GitHub">GitHub</a>
+                            {{ end }}
+                            {{ if .Site.Params.twitter }}
+                            <a href="https://twitter.com/{{ .Site.Params.twitter }}" title="Twitter">Twitter</a>
+                            {{ end }}
+                            {{ if .Site.Params.bluesky }}
+                            <a href="https://{{ .Site.Params.bluesky }}" title="Bluesky">Bluesky</a>
+                            {{ end }}
+                            {{ if .Site.Params.orcid }}
+                            <a href="{{ .Site.Params.orcid }}" title="ORCID">ORCID</a>
+                            {{ end }}
+                            {{ if .Site.Params.googlescholar }}
+                            <a href="{{ .Site.Params.googlescholar }}" title="Google Scholar">Scholar</a>
+                            {{ end }}
+                            {{ if .Site.Params.stackoverflow }}
+                            <a href="https://stackoverflow.com/users/{{ .Site.Params.stackoverflow }}" title="Stack Overflow">SO</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

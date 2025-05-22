@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="home-layout">
+    <aside class="author-profile">
+        <img src="{{ printf "/images/%s" .Site.Params.avatar | relURL }}" alt="{{ .Site.Params.name }}" class="avatar">
+        <div class="author-info">
+            <h2>{{ .Site.Params.name }}</h2>
+            <p class="bio">{{ .Site.Params.bio | safeHTML }}</p>
+            <div class="social-links">
+                {{ if .Site.Params.email }}
+                <a href="mailto:{{ .Site.Params.email }}" title="Email">✉️</a>
+                {{ end }}
+                {{ if .Site.Params.github }}
+                <a href="https://github.com/{{ .Site.Params.github }}" title="GitHub">GitHub</a>
+                {{ end }}
+                {{ if .Site.Params.twitter }}
+                <a href="https://twitter.com/{{ .Site.Params.twitter }}" title="Twitter">Twitter</a>
+                {{ end }}
+                {{ if .Site.Params.bluesky }}
+                <a href="https://{{ .Site.Params.bluesky }}" title="Bluesky">Bluesky</a>
+                {{ end }}
+                {{ if .Site.Params.orcid }}
+                <a href="{{ .Site.Params.orcid }}" title="ORCID">ORCID</a>
+                {{ end }}
+                {{ if .Site.Params.googlescholar }}
+                <a href="{{ .Site.Params.googlescholar }}" title="Google Scholar">Scholar</a>
+                {{ end }}
+                {{ if .Site.Params.stackoverflow }}
+                <a href="https://stackoverflow.com/users/{{ .Site.Params.stackoverflow }}" title="Stack Overflow">SO</a>
+                {{ end }}
+            </div>
+        </div>
+    </aside>
+    
+    <main class="main-content">
+        <article class="page-content">
+            {{ .Content }}
+        </article>
+        
+        {{ $recent := (where .Site.RegularPages "Section" "posts") | first 3 }}
+        {{ if $recent }}
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="posts-list">
+                {{ range $recent }}
+                <article class="post-summary">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    {{ if .Summary }}
+                    <p>{{ .Summary | truncate 150 }}</p>
+                    {{ end }}
+                </article>
+                {{ end }}
+            </div>
+            <a href="{{ "/posts/" | relURL }}" class="view-all">View all posts →</a>
+        </section>
+        {{ end }}
+    </main>
+</div>
+{{ end }}
