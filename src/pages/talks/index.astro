@@ -1,0 +1,31 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getTalks, groupByYear, formatDate } from "../../lib/content";
+
+const years = groupByYear(await getTalks());
+---
+
+<Base title="Talks" description="Talks and presentations by Ben Dichter.">
+  <h1>Talks and presentations</h1>
+  {
+    years.map(([year, talks]) => (
+      <section>
+        <h2 class="year">{year}</h2>
+        <ul class="entries">
+          {talks.map((talk) => (
+            <li>
+              <a class="entry__title" href={talk.data.permalink}>
+                {talk.data.title}
+              </a>
+              <div class="entry__meta">
+                <em>{talk.data.venue}</em>
+                {talk.data.location && <> &middot; {talk.data.location}</>} &middot;{" "}
+                {formatDate(talk.data.date)}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

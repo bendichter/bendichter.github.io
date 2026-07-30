@@ -1,0 +1,42 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getPublications, byYear } from "../../lib/publications";
+import { site } from "../../data/site";
+
+const years = byYear(getPublications());
+---
+
+<Base title="Publications" description="Publications by Ben Dichter.">
+  <h1>Publications</h1>
+
+  <p>
+    Generated from my <a href={`https://orcid.org/${site.orcid}`}>ORCID record</a> at
+    build time. Also on
+    <a href="https://scholar.google.com/citations?user=_IwI_oEAAAAJ">Google Scholar</a>.
+  </p>
+
+  {
+    years.map(([year, pubs]) => (
+      <section>
+        <h2 class="year">{year || "Undated"}</h2>
+        <ul class="entries">
+          {pubs.map((pub) => (
+            <li>
+              {pub.url ? (
+                <a class="entry__title" href={pub.url}>
+                  {pub.title}
+                </a>
+              ) : (
+                <span class="entry__title">{pub.title}</span>
+              )}
+              <div class="entry__meta">
+                <em>{pub.journal ?? pub.type}</em>
+                {pub.doi && <> &middot; {pub.doi}</>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

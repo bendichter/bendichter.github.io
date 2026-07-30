@@ -1,0 +1,109 @@
+[
+  {
+    "_comment": "Works that are not in the ORCID record yet. Every entry here is a gap in ORCID, so the right fix is to add it there (which helps everywhere, not just this site) and delete the entry from this file. The build prints how many are left. `aliases` lets an entry absorb a preprint that ORCID lists under a different title.",
+    "title": "Unifying community whole-brain imaging datasets enables robust neuron identification and reveals determinants of neuron position in C. elegans",
+    "journal": "Cell Reports Methods",
+    "type": "journal-article",
+    "year": 2025,
+    "url": "https://doi.org/10.1016/j.crmeth.2024.100964",
+    "doi": "10.1016/j.crmeth.2024.100964"
+  },
+  {
+    "title": "Methods for Linking Data to Online Resources and Ontologies with Applications to Neurophysiology",
+    "journal": "arXiv",
+    "type": "preprint",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2406.00063",
+    "doi": null
+  },
+  {
+    "title": "A modular implementation to handle and benchmark drift correction for high-density extracellular recordings",
+    "journal": "eNeuro",
+    "type": "journal-article",
+    "year": 2024,
+    "url": "https://www.eneuro.org/content/11/2/ENEURO.0492-23.2023",
+    "doi": "10.1523/ENEURO.0492-23.2024",
+    "aliases": ["A modular approach to handle in vivo drift correction for high-density extracellular recordings"]
+  },
+  {
+    "title": "SciOps: Achieving Productivity and Reliability in Data-Intensive Research",
+    "journal": "arXiv",
+    "type": "preprint",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2401.00077",
+    "doi": null,
+    "aliases": ["A maturity model for operations in neuroscience research"]
+  },
+  {
+    "title": "A comparison of neuroelectrophysiology databases",
+    "journal": "Scientific Data",
+    "type": "journal-article",
+    "year": 2023,
+    "url": "https://www.nature.com/articles/s41597-023-02596-z",
+    "doi": "10.1038/s41597-023-02596-z"
+  },
+  {
+    "title": "A guide to the BRAIN Initiative Cell Census Network data ecosystem",
+    "journal": "PLOS Biology",
+    "type": "journal-article",
+    "year": 2023,
+    "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002133",
+    "doi": "10.1371/journal.pbio.3002133"
+  },
+  {
+    "title": "AJILE12: Long-term naturalistic human intracranial neural recordings and pose",
+    "journal": "Scientific Data",
+    "type": "journal-article",
+    "year": 2022,
+    "url": "https://www.nature.com/articles/s41597-022-01280-y",
+    "doi": "10.1038/s41597-022-01280-y"
+  },
+  {
+    "title": "Pan-neuro: Interactive computing at scale with BRAIN datasets",
+    "journal": "OSF Preprints",
+    "type": "preprint",
+    "year": 2021,
+    "url": "https://osf.io/mwh2b/download",
+    "doi": null
+  },
+  {
+    "title": "NWB:N 2.0: An Accessible Data Standard for Neurophysiology",
+    "journal": "bioRxiv",
+    "type": "preprint",
+    "year": 2019,
+    "url": "https://escholarship.org/uc/item/8582b6x9",
+    "doi": null
+  },
+  {
+    "title": "Dynamic Structure of Neural Variability in the Cortical Representation of Speech Sounds",
+    "journal": "Journal of Neuroscience",
+    "type": "journal-article",
+    "year": 2016,
+    "url": "https://www.jneurosci.org/content/36/28/7453",
+    "doi": "10.1523/JNEUROSCI.0156-16.2016"
+  },
+  {
+    "title": "Decoding speech using the timing of neural signal modulation",
+    "journal": "IEEE Engineering in Medicine and Biology Society (EMBC)",
+    "type": "conference-paper",
+    "year": 2016,
+    "url": "https://ieeexplore.ieee.org/document/7591217",
+    "doi": "10.1109/EMBC.2016.7591217"
+  },
+  {
+    "title": "ECoG data analyses to inform closed-loop BCI experiments for speech-based prosthetic applications",
+    "journal": "IEEE Engineering in Medicine and Biology Society (EMBC)",
+    "type": "conference-paper",
+    "year": 2016,
+    "url": "https://ieeexplore.ieee.org/document/7591218",
+    "doi": "10.1109/EMBC.2016.7591218"
+  },
+  {
+    "title": "Recurrent exponential-family harmoniums without backprop-through-time",
+    "journal": "arXiv",
+    "type": "preprint",
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1605.05799",
+    "doi": null
+  }
+]

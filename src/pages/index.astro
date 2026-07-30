@@ -1,0 +1,111 @@
+---
+import Base from "../layouts/Base.astro";
+import { software } from "../data/site";
+import { getPosts, formatDate } from "../lib/content";
+
+const recent = (await getPosts()).slice(0, 3);
+---
+
+<Base>
+  <h1>About me</h1>
+
+  <p class="lede">
+    I am a Research Software Engineer and the Founder of
+    <a href="https://catalystneuro.com">CatalystNeuro</a>, where I work on the data
+    standards and software infrastructure that let neuroscience labs share their data
+    and build on each other's work.
+  </p>
+
+  <h2>Vision and Work</h2>
+
+  <p>
+    Neuroscience produces an enormous amount of data, but very little of it is in a
+    form that another lab can pick up and use. At CatalystNeuro we work on the
+    practical side of that problem: developing standardized formats for
+    neurophysiology data, building conversion and analysis tools that labs can
+    actually adopt, connecting analysis platforms that would otherwise stay siloed,
+    and working directly with labs to reshape their data workflows. Much of this
+    happens through <a href="https://nwb.org">Neurodata Without Borders</a> and the
+    <a href="https://dandiarchive.org">DANDI Archive</a>, alongside a large community
+    of contributors.
+  </p>
+
+  <p>
+    The through line is that standardization is worth doing only if the tools around
+    it are good enough that using them is easier than not using them. That is where
+    most of my attention goes.
+  </p>
+
+  <h2>Software</h2>
+
+  <ul class="software">
+    {
+      software.map((s) => (
+        <li>
+          <a href={s.href}>{s.name}</a>
+          <p>{s.blurb}</p>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>Recent Writing</h2>
+
+  <ul class="entries">
+    {
+      recent.map((post) => (
+        <li>
+          <a class="entry__title" href={post.data.permalink}>
+            {post.data.title}
+          </a>
+          <div class="entry__meta">{formatDate(post.data.date)}</div>
+        </li>
+      ))
+    }
+  </ul>
+  <p><a href="/posts/">All posts</a></p>
+
+  <h2>Background</h2>
+
+  <p>
+    I received my Ph.D. in Bioengineering from the
+    <a href="https://bioegrad.berkeley.edu/">
+      UC Berkeley - UCSF Joint Program in Bioengineering</a
+    >, working in <a href="https://changlab.ucsf.edu/">Dr. Edward Chang's lab</a>. My
+    research used electrocorticography (ECoG) to study speech motor control in humans,
+    particularly the neural mechanisms of voice pitch control in speaking and singing.
+  </p>
+
+  <p>
+    As an undergraduate at the University of Pittsburgh, I worked in the
+    <a href="https://smile.pitt.edu/">SMILE lab</a> with
+    <a href="https://www.engineering.pitt.edu/AaronBatista/">Dr. Aaron Batista</a> on
+    probabilistic models of neural activity. That early work shaped how I think about
+    neural data analysis, and it is a fairly direct line from there to my interest in
+    standardizing data practices across the field.
+  </p>
+
+  <h2>Alternative Paths in Science</h2>
+
+  <p>
+    I am interested in non-traditional careers in science, and CatalystNeuro is one
+    example of what those can look like. I work with a team of neuroscientists and
+    software developers who came to this work from a range of backgrounds, most of
+    them not the standard academic track.
+  </p>
+
+  <p>
+    If you are considering a path like this, or just want to hear how it has gone,
+    feel free to reach out at
+    <a href="mailto:ben.dichter@catalystneuro.com">ben.dichter@catalystneuro.com</a>. I
+    am happy to talk about it.
+  </p>
+
+  <h2>Beyond the Lab</h2>
+
+  <p>
+    Outside of work I dance West Coast Swing and travel as much as I can manage. I
+    also built <a href="https://westie.wiki">westie.wiki</a>, a community wiki for
+    West Coast Swing moves.
+  </p>
+</Base>

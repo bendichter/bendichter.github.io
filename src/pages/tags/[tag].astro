@@ -1,0 +1,39 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getPosts, formatDate } from "../../lib/content";
+
+const slug = (tag: string) => tag.replace(/\s+/g, "-");
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  const tags = new Map<string, typeof posts>();
+  for (const post of posts) {
+    for (const tag of post.data.tags) {
+      tags.set(tag, [...(tags.get(tag) ?? []), post]);
+    }
+  }
+  return [...tags.entries()].map(([tag, posts]) => ({
+    params: { tag: tag.replace(/\s+/g, "-") },
+    props: { tag, posts },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<Base title={`Posts tagged "${tag}"`}>
+  <h1>Tagged &ldquo;{tag}&rdquo;</h1>
+  <ul class="entries">
+    {
+      posts.map((post) => (
+        <li>
+          <a class="entry__title" href={post.data.permalink}>
+            {post.data.title}
+          </a>
+          <div class="entry__meta">{formatDate(post.data.date)}</div>
+        </li>
+      ))
+    }
+  </ul>
+  <p><a href="/posts/">All posts</a></p>
+</Base>

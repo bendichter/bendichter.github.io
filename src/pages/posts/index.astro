@@ -1,0 +1,27 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getPosts, groupByYear, formatDate } from "../../lib/content";
+
+const years = groupByYear(await getPosts());
+---
+
+<Base title="Blog" description="Posts by Ben Dichter.">
+  <h1>Blog</h1>
+  {
+    years.map(([year, posts]) => (
+      <section>
+        <h2 class="year">{year}</h2>
+        <ul class="entries">
+          {posts.map((post) => (
+            <li>
+              <a class="entry__title" href={post.data.permalink}>
+                {post.data.title}
+              </a>
+              <div class="entry__meta">{formatDate(post.data.date)}</div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

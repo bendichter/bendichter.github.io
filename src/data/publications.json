@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Facilitating analysis of open neurophysiology data on the DANDI Archive using large language model tools",
+    "journal": null,
+    "type": "preprint",
+    "year": 2025,
+    "url": "https://doi.org/10.1101/2025.07.17.663965",
+    "doi": "10.1101/2025.07.17.663965"
+  },
+  {
+    "title": "NeuroConv: Streamlining Neurophysiology Data Conversion to the NWB Standard",
+    "journal": null,
+    "type": "conference-paper",
+    "year": 2025,
+    "url": "https://doi.org/10.25080/cehj4257",
+    "doi": "10.25080/cehj4257"
+  },
+  {
+    "title": "Neurosift: DANDI exploration and NWB visualization in the browser",
+    "journal": "Journal of Open Source Software",
+    "type": "journal-article",
+    "year": 2024,
+    "url": "https://doi.org/10.21105/joss.06590",
+    "doi": "10.21105/joss.06590"
+  },
+  {
+    "title": "A modular approach to handlein-vivodrift correction for high-density extracellular recordings",
+    "journal": null,
+    "type": "preprint",
+    "year": 2023,
+    "url": "https://doi.org/10.1101/2023.06.29.546882",
+    "doi": "10.1101/2023.06.29.546882"
+  },
+  {
+    "title": "The Neurodata Without Borders ecosystem for neurophysiological data science",
+    "journal": "eLife",
+    "type": "journal-article",
+    "year": 2022,
+    "url": "https://doi.org/10.7554/elife.78362",
+    "doi": "10.7554/elife.78362"
+  },
+  {
+    "title": "A NWB-based dataset and processing pipeline of human single-neuron activity during a declarative memory task",
+    "journal": "Scientific Data",
+    "type": "journal-article",
+    "year": 2020,
+    "url": "https://doi.org/10.1038/s41597-020-0415-9",
+    "doi": "10.1038/s41597-020-0415-9"
+  },
+  {
+    "title": "The SONATA data format for efficient description of large-scale network models",
+    "journal": "PLOS Computational Biology",
+    "type": "journal-article",
+    "year": 2020,
+    "url": "https://doi.org/10.1371/journal.pcbi.1007696",
+    "doi": "10.1371/journal.pcbi.1007696"
+  },
+  {
+    "title": "HDMF: Hierarchical Data Modeling Framework for Modern Science Data Standards",
+    "journal": "2019 IEEE International Conference on Big Data (Big Data)",
+    "type": "conference-paper",
+    "year": 2019,
+    "url": "https://doi.org/10.1109/bigdata47090.2019.9005648",
+    "doi": "10.1109/bigdata47090.2019.9005648"
+  },
+  {
+    "title": "iEEG-BIDS, extending the Brain Imaging Data Structure specification to human intracranial electrophysiology",
+    "journal": "Scientific Data",
+    "type": "journal-article",
+    "year": 2019,
+    "url": "https://doi.org/10.1038/s41597-019-0105-7",
+    "doi": "10.1038/s41597-019-0105-7"
+  },
+  {
+    "title": "The Control of Vocal Pitch in Human Laryngeal Motor Cortex",
+    "journal": "Cell",
+    "type": "journal-article",
+    "year": 2018,
+    "url": "https://doi.org/10.1016/j.cell.2018.05.016",
+    "doi": "10.1016/j.cell.2018.05.016"
+  },
+  {
+    "title": "High-Resolution, Non-Invasive Imaging of Upper Vocal Tract Articulators Compatible with Human Brain Recordings",
+    "journal": "PLOS ONE",
+    "type": "journal-article",
+    "year": 2016,
+    "url": "https://doi.org/10.1371/journal.pone.0151327",
+    "doi": "10.1371/journal.pone.0151327"
+  },
+  {
+    "title": "Muscle synergies after stroke are correlated with perilesional high gamma",
+    "journal": "Annals of Clinical and Translational Neurology",
+    "type": "journal-article",
+    "year": 2016,
+    "url": "https://doi.org/10.1002/acn3.368",
+    "doi": "10.1002/acn3.368"
+  },
+  {
+    "title": "Learning to Estimate Dynamical State with Probabilistic Population Codes",
+    "journal": "PLoS Comput Biol",
+    "type": "journal-article",
+    "year": 2015,
+    "url": "https://doi.org/10.1371/journal.pcbi.1004554",
+    "doi": "10.1371/journal.pcbi.1004554"
+  },
+  {
+    "title": "A multi-modal imaging system for simultaneous measurement of speech articulator kinematics for bedside applications in clinical settings",
+    "journal": "The Journal of the Acoustical Society of America",
+    "type": "journal-article",
+    "year": 2014,
+    "url": "https://doi.org/10.1121/1.4899566",
+    "doi": "10.1121/1.4899566"
+  }
+]

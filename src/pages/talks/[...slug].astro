@@ -1,0 +1,44 @@
+---
+import { render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { getTalks, formatDate } from "../../lib/content";
+
+export async function getStaticPaths() {
+  const talks = await getTalks();
+  return talks.map((talk) => ({
+    params: { slug: talk.data.permalink.replace(/^\/talks\/|\/$/g, "") },
+    props: { talk },
+  }));
+}
+
+const { talk } = Astro.props;
+const { Content } = await render(talk);
+---
+
+<Base title={talk.data.title} description={`${talk.data.title}, ${talk.data.venue}.`}>
+  <article class="prose">
+    <h1>{talk.data.title}</h1>
+    <div class="article__meta">
+      <em>{talk.data.venue}</em>
+      {talk.data.location && <> &middot; {talk.data.location}</>} &middot;{" "}
+      {formatDate(talk.data.date)}
+    </div>
+
+    <Content />
+
+    {/* The embed markup lives here, not pasted into each talk's prose. */}
+    {
+      talk.data.youtube && (
+        <div class="embed">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${talk.data.youtube}`}
+            title={`Video: ${talk.data.title}`}
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+      )
+    }
+  </article>
+</Base>

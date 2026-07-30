@@ -1,0 +1,31 @@
+---
+import { site, socials } from "../data/site";
+import Icon from "./Icon.astro";
+---
+
+<aside class="profile">
+  <img
+    class="profile__avatar"
+    src={site.avatar}
+    width="272"
+    height="272"
+    alt="Ben Dichter"
+  />
+  <div class="profile__name">{site.name}</div>
+  <p class="profile__bio">
+    Research Software Engineer and Founder of
+    <a href="https://catalystneuro.com">CatalystNeuro</a>.
+  </p>
+  <ul class="profile__links">
+    {
+      socials.map((s) => (
+        <li>
+          <a href={s.href} rel={s.href.startsWith("http") ? "me" : undefined}>
+            <Icon name={s.icon} />
+            {s.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

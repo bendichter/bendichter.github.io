@@ -1,0 +1,40 @@
+---
+import { render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { getPosts, formatDate } from "../../lib/content";
+
+/**
+ * Routes come from the `permalink` in front matter rather than the filename, so
+ * every URL the Jekyll site published keeps working. That is why permalink is a
+ * required, format-checked field in the schema.
+ */
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    params: { slug: post.data.permalink.replace(/^\/posts\/|\/$/g, "") },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Base title={post.data.title} description={`${post.data.title} - a post by Ben Dichter.`}>
+  <article class="prose">
+    <h1>{post.data.title}</h1>
+    <div class="article__meta">{formatDate(post.data.date)}</div>
+    <Content />
+    {
+      post.data.tags.length > 0 && (
+        <ul class="tags">
+          {post.data.tags.map((tag) => (
+            <li>
+              <a href={`/tags/${tag.replace(/\s+/g, "-")}/`}>{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </article>
+</Base>
