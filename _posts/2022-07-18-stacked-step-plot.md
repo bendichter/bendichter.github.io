@@ -1,7 +1,9 @@
 ---
 title: 'Stacked Step Plot'
 date: 2022-07-18
-permalink: /posts/2022-07-18-stacked-stop-plot
+permalink: /posts/2022-07-18-stacked-step-plot
+redirect_from:
+- /posts/2022-07-18-stacked-stop-plot
 tags:
 - matplotlib
 - python

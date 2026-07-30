@@ -1,40 +1,76 @@
 ---
 permalink: /
 title: "About me"
-excerpt: "About me"
+excerpt: "Research Software Engineer and Founder of CatalystNeuro, working on data standards and open source tools for neuroscience."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a Research Software Engineer and the Founder of [CatalystNeuro](http://catalystneuro.com), where I work to transform how neuroscience labs collaborate and share data.
+I am a Research Software Engineer and the Founder of [CatalystNeuro](https://catalystneuro.com),
+where I work on the data standards and software infrastructure that let neuroscience labs share
+their data and build on each other's work.
 
-## Vision & Work
+## Vision and Work
 
-At CatalystNeuro, we're revolutionizing neuroscience collaboration through better data standardization and tool sharing. Our work focuses on:
+Neuroscience produces an enormous amount of data, but very little of it is in a form that another
+lab can pick up and use. At CatalystNeuro we work on the practical side of that problem: developing
+standardized formats for neurophysiology data, building conversion and analysis tools that labs can
+actually adopt, connecting analysis platforms that would otherwise stay siloed, and working directly
+with labs to reshape their data workflows. Much of this happens through
+[Neurodata Without Borders](https://nwb.org) and the [DANDI Archive](https://dandiarchive.org),
+alongside a large community of contributors.
 
-- Developing standardized data formats for neuroscience
-- Creating tools for seamless data sharing between labs
-- Building bridges between different analysis platforms
-- Consulting with labs to optimize their data workflows
+The through line is that standardization is worth doing only if the tools around it are good enough
+that using them is easier than not using them. That is where most of my attention goes.
 
-We believe the future of neuroscience lies in open collaboration, and we're actively shaping how data and tools are shared across the international neuroscience community.
+## Software
+
+A selection of the open source projects I work on and contribute to:
+
+- **[Neurodata Without Borders](https://nwb.org)**: a data standard for neurophysiology, covering
+  electrophysiology, optical physiology, behavior, and the metadata that makes a dataset reusable.
+- **[DANDI Archive](https://dandiarchive.org)**: a public archive for neurophysiology datasets,
+  with versioning and programmatic access.
+- **[NeuroConv](https://github.com/catalystneuro/neuroconv)**: converts data from a wide range of
+  acquisition systems into NWB, which is usually the hardest part of adopting the standard.
+- **[nwbwidgets](https://github.com/NeurodataWithoutBorders/nwbwidgets)**: interactive Jupyter
+  widgets for exploring the contents of an NWB file without writing plotting code.
+- **[Neurosift](https://github.com/flatironinstitute/neurosift)**: browser-based visualization of
+  NWB files and DANDI datasets, with no local installation.
+- **[SpikeInterface](https://github.com/SpikeInterface/spikeinterface)**: a unified interface to
+  spike sorting algorithms and extracellular recording formats.
+- **[brokenaxes](https://github.com/bendichter/brokenaxes)**: a small matplotlib package for plots
+  with a broken axis.
+
+I write occasionally about tools and techniques that come out of this work. Those posts are
+collected on the [blog](/year-archive/).
 
 ## Background
 
-I received my Ph.D. in Bioengineering from the [UC Berkeley - UCSF Joint Program in Bioengineering](http://bioegrad.berkeley.edu/), working in [Dr. Edward Chang's lab](http://changlab.ucsf.edu/). My research focused on using electrocorticography (ECoG) to understand speech control in humans, particularly the neural mechanisms of voice pitch control in speaking and singing.
+I received my Ph.D. in Bioengineering from the
+[UC Berkeley - UCSF Joint Program in Bioengineering](https://bioegrad.berkeley.edu/), working in
+[Dr. Edward Chang's lab](https://changlab.ucsf.edu/). My research used electrocorticography (ECoG)
+to study speech motor control in humans, particularly the neural mechanisms of voice pitch control
+in speaking and singing.
 
-During my undergraduate years at the University of Pittsburgh's [SMILE lab](https://smile.pitt.edu/) under [Dr. Aaron Batista](https://www.engineering.pitt.edu/AaronBatista/), I developed probabilistic models of neural activity. This early work shaped my approach to neural data analysis and eventually led to my interest in standardizing data practices across the field.
+As an undergraduate at the University of Pittsburgh, I worked in the
+[SMILE lab](https://smile.pitt.edu/) with
+[Dr. Aaron Batista](https://www.engineering.pitt.edu/AaronBatista/) on probabilistic models of
+neural activity. That early work shaped how I think about neural data analysis, and it is a fairly
+direct line from there to my interest in standardizing data practices across the field.
 
 ## Alternative Paths in Science
 
-I'm passionate about exploring non-traditional careers in science. Through CatalystNeuro, I've found a way to contribute to neuroscience beyond the conventional academic path. I work with a talented team of neuroscientists and software developers who share this vision.
+I am interested in non-traditional careers in science, and CatalystNeuro is one example of what
+those can look like. I work with a team of neuroscientists and software developers who came to this
+work from a range of backgrounds, most of them not the standard academic track.
 
-If you're interested in exploring alternative careers in science or want to learn about different paths, feel free to reach out. I'm always happy to share experiences and discuss possibilities.
+If you are considering a path like this, or just want to hear how it has gone, feel free to reach
+out at [ben.dichter@catalystneuro.com](mailto:ben.dichter@catalystneuro.com). I am happy to talk
+about it.
 
 ## Beyond the Lab
 
-When not working on neuroscience data, I enjoy:
-- Dancing West Coast Swing
-- Traveling and exploring new cultures
+Outside of work I dance West Coast Swing and travel as much as I can manage.

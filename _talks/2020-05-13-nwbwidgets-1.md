@@ -4,10 +4,10 @@ collection: talks
 type: "Talk"
 permalink: /talks/2020-05-13-nwbwidgets-1
 venue: "NWB Remote User Days 2020"
-date: 2012-03-01
+date: 2020-05-13
 ---
 
-This video shows the lightning talk on the [NWBWidgets project](https://github.com/NeurodataWithoutBorders/nwb-jupyter-widgets) followed by the in-depth breakout session.
+This video shows the lightning talk on the [NWBWidgets project](https://github.com/NeurodataWithoutBorders/nwbwidgets) followed by the in-depth breakout session.
 
 
 

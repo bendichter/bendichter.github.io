@@ -5,6 +5,10 @@ permalink: /publications/
 author_profile: true
 ---
 
+A complete and continuously updated list is available on my
+[Google Scholar profile](https://scholar.google.com/citations?user=_IwI_oEAAAAJ)
+and my [ORCID record](https://orcid.org/0000-0001-5725-6910).
+
 ### 2025
 
 <p>
@@ -47,13 +51,6 @@ author_profile: true
 ### 2023
 
 <p>
-  <a href="https://arxiv.org/abs/2401.00077v1">
-    <b>A maturity model for operations in neuroscience research</b></a><br>
-  <i>arXiv preprint arXiv:2401.00077 (2023)</i><br>
-  EC Johnson, TT Nguyen, <b>BK Dichter</b>, F Zappulla, M Kosma, K Gunalan, ...
-</p>
-
-<p>
   <a href="https://www.nature.com/articles/s41597-023-02596-z">
     <b>A comparison of neuroelectrophysiology databases</b></a><br>
   <i>Scientific data 10 (1), 719 (2023)</i><br>
@@ -87,19 +84,13 @@ author_profile: true
 ### 2021
 
 <p>
-  <a href="https://www.nature.com/articles/s41597-020-0415-9](https://osf.io/mwh2b/download">
+  <a href="https://osf.io/mwh2b/download">
     <b>Pan-neuro: Interactive computing at scale with BRAIN dataset</b></a><br>
   <i>OSF Preprints (2021)</i><br>
   A Rokem, <b>B Dichter</b>, C Holdgraf, S Ghosh
 </p> 
 
 
-<p>
-  <a href="https://www.biorxiv.org/content/biorxiv/early/2022/03/29/2021.03.13.435173.full.pdf">
-    <b>The Neurodata Without Borders ecosystem for neurophysiological data science</b></a><br>
-  <i>boiRxiv (2021)</i><br>
-  Oliver Rübel, Andrew Tritt, Ryan Ly, <b>Benjamin K. Dichter</b>, Satrajit Ghosh, Lawrence Niu, Ivan Soltesz, Karel Svoboda, Loren Frank, Kristofer E. Bouchard
-</p>  
 
 ### 2020
 
@@ -192,7 +183,7 @@ Makin, J. G., <b>Dichter, B. K.</b>, & Sabes, P. N.
 </p>
 
 <p>
-<a href="https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0151327.g002">
+<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151327">
 <b>High-resolution, non-invasive imaging of upper vocal tract articulators compatible with human brain recordings</b></a><br>
 <i>PLoS One</i> (2016)<br>
 Bouchard, K. E., Conant, D. F., Anumanchipalli, G. K., <b>Dichter, B.</b>, Chaisanguanthum, K. S., Johnson, K., & Chang, E. F.
