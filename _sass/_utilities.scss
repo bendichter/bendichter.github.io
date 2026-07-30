@@ -193,10 +193,27 @@ body:hover .visually-hidden button {
   margin-right: 0.5em;
 }
 
+/*
+   Inline X (formerly Twitter) mark. The vendored Font Awesome is 5.5.0, which
+   has no fa-x-twitter glyph, so the logo is inlined as SVG instead. Sized to
+   match the 1.25em fixed width of the fa-fw icons it sits alongside.
+*/
+.icon-x {
+  width: 1.25em;
+  height: 1em;
+  vertical-align: -0.125em;
+  margin-right: 0.5em;
+}
+
 /* social icons*/
 
 .social-icons {
   .fa {
+    color: #000;
+  }
+
+  /* the inlined X mark takes its fill from currentColor, so set it here too */
+  .icon-x {
     color: #000;
   }
 
