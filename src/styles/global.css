@@ -30,7 +30,11 @@
   --c5: #b3781a;
   --c6: #b8492f;
 
-  --measure: 40rem;
+  /* Content width, shared by every page. */
+  --measure: 58rem;
+  /* Long-form body text is held narrower than the page inside articles, since
+     58rem of running prose is past the line length most people read easily. */
+  --prose: 42rem;
   --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter,
     Helvetica, Arial, sans-serif;
   --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
@@ -273,11 +277,15 @@ hr {
   background: var(--accent);
 }
 
+/* The homepage's two tracks plus the gap add up to --measure, so it spans
+   exactly the same width as every single-column page rather than a shade
+   wider, which is the sort of difference you feel without being able to name. */
 .layout {
   display: grid;
   gap: 3.5rem;
   padding-block: 3rem 5rem;
-  grid-template-columns: 14rem minmax(0, 1fr);
+  grid-template-columns: 14rem minmax(0, 40.5rem);
+  justify-content: center;
 }
 
 @media (max-width: 48rem) {
@@ -288,13 +296,16 @@ hr {
   }
 }
 
-/* Without the profile column the layout is a single track, so the reading
-   measure has to be centred rather than left-aligned against a missing one. */
+/* Without the profile column the layout is a single track, so the content has
+   to be centred rather than left-aligned against a missing one. */
 .layout--solo {
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
 }
 
+/* One width for every page, the one the card grids wanted. Holding prose to a
+   narrower measure and grids to a wider one made each page look correct on its
+   own and made the set look unplanned when you moved between them. */
 main {
   max-width: var(--measure);
   min-width: 0;
@@ -303,11 +314,6 @@ main {
 
 main > :first-child {
   margin-top: 0;
-}
-
-/* Grid pages set .wide on their content, which needs the room to reach it. */
-.layout--solo:has(.wide) main {
-  max-width: 58rem;
 }
 
 /* ---- profile -------------------------------------------------------- */
@@ -548,12 +554,6 @@ a.entry__title:hover {
 }
 
 /* ---- project cards -------------------------------------------------- */
-
-/* The software page drops the profile column, so its main can run wider than
-   the reading measure the prose pages are held to. */
-.wide {
-  max-width: 58rem;
-}
 
 .group__blurb {
   color: var(--muted);
@@ -904,6 +904,15 @@ a.entry__title:hover {
 }
 
 /* ---- article -------------------------------------------------------- */
+
+/* The page is --measure wide like every other page, but an article's running
+   text sits in a narrower column inside it. 58rem of body copy runs to roughly
+   120 characters a line, which is well past comfortable. Images and code are
+   allowed to break out to the full width below. */
+.prose {
+  max-width: var(--prose);
+  margin-inline: auto;
+}
 
 .prose :is(h2, h3) + p {
   margin-top: 0;

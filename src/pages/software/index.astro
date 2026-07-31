@@ -23,57 +23,55 @@ const groups = [
   title="Software"
   description="Side projects by Ben Dichter: apps, libraries, and tools built outside of his CatalystNeuro work."
 >
-  <div class="wide">
-    <h1>Software</h1>
+  <h1>Software</h1>
 
-    <p class="lede">
-      Side projects, the things I build outside of work. My neuroscience software is
-      CatalystNeuro's and lives at{" "}
-      <a href="https://catalystneuro.com">catalystneuro.com</a>.
-    </p>
+  <p class="lede">
+    Side projects, the things I build outside of work. My neuroscience software is
+    CatalystNeuro's and lives at{" "}
+    <a href="https://catalystneuro.com">catalystneuro.com</a>.
+  </p>
 
-    {
-      groups.map((group) => (
-        <section>
-          <h2>{group.title}</h2>
-          <p class="group__blurb">{group.blurb}</p>
-          <ul class="cards">
-            {group.items.map((project) => (
-              <li class="card">
-                <div class="card__head">
-                  <h3 class="card__name">
-                    <a href={project.href}>{project.name}</a>
-                  </h3>
-                  {project.stars && (
-                    <span class="card__stars" title={`${project.stars} stars on GitHub`}>
-                      ★ {project.stars}
-                    </span>
-                  )}
-                </div>
-
-                <span class="card__lang">{project.lang}</span>
-
-                <p class="card__blurb">{project.blurb}</p>
-
-                {project.facts && (
-                  <ul class="card__facts">
-                    {project.facts.map((fact) => (
-                      <li>{fact}</li>
-                    ))}
-                  </ul>
+  {
+    groups.map((group) => (
+      <section>
+        <h2>{group.title}</h2>
+        <p class="group__blurb">{group.blurb}</p>
+        <ul class="cards">
+          {group.items.map((project) => (
+            <li class="card">
+              <div class="card__head">
+                <h3 class="card__name">
+                  <a href={project.href}>{project.name}</a>
+                </h3>
+                {project.stars && (
+                  <span class="card__stars" title={`${project.stars} stars on GitHub`}>
+                    ★ {project.stars}
+                  </span>
                 )}
+              </div>
 
-                <div class="card__links">
-                  {!project.href.includes("github.com") && (
-                    <a href={project.href}>Visit &rarr;</a>
-                  )}
-                  {project.repo && <a href={project.repo}>Source</a>}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
-    }
-  </div>
+              <span class="card__lang">{project.lang}</span>
+
+              <p class="card__blurb">{project.blurb}</p>
+
+              {project.facts && (
+                <ul class="card__facts">
+                  {project.facts.map((fact) => (
+                    <li>{fact}</li>
+                  ))}
+                </ul>
+              )}
+
+              <div class="card__links">
+                {!project.href.includes("github.com") && (
+                  <a href={project.href}>Visit &rarr;</a>
+                )}
+                {project.repo && <a href={project.repo}>Source</a>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
 </Base>

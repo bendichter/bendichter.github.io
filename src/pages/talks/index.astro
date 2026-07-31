@@ -24,53 +24,51 @@ const years = groupByYear(await getTalks());
   title="Talks"
   description="Talks and presentations by Ben Dichter on NWB, DANDI, and working with LLMs."
 >
-  <div class="wide">
-    <h1>Talks and presentations</h1>
+  <h1>Talks and presentations</h1>
 
-    <p class="lede">
-      Mostly workshop sessions on NWB and the DANDI Archive, and more recently on
-      working with LLMs and agents. Recordings are on the{" "}
-      <a href="https://www.youtube.com/c/NeurodataWithoutBorders">
-        Neurodata Without Borders channel</a
-      >.
-    </p>
+  <p class="lede">
+    Mostly workshop sessions on NWB and the DANDI Archive, and more recently on
+    working with LLMs and agents. Recordings are on the{" "}
+    <a href="https://www.youtube.com/c/NeurodataWithoutBorders">
+      Neurodata Without Borders channel</a
+    >.
+  </p>
 
-    {
-      years.map(([year, talks]) => (
-        <section>
-          <h2 class="year">{year}</h2>
-          <ul class="talks">
-            {talks.map((talk) => {
-              const thumb = thumbFor(talk.data.youtube);
-              return (
-                <li class="talk">
-                  <a class="talk__link" href={talk.data.permalink}>
-                    {thumb ? (
-                      <span class="talk__thumb">
-                        <Image
-                          src={thumb}
-                          alt=""
-                          widths={[320, 640]}
-                          sizes="(max-width: 30rem) 100vw, 20rem"
-                          loading="lazy"
-                        />
-                        <span class="talk__play" aria-hidden="true" />
-                      </span>
-                    ) : (
-                      <span class="talk__thumb talk__thumb--empty" aria-hidden="true" />
-                    )}
-                    <span class="talk__title">{talk.data.title}</span>
-                  </a>
-                  <div class="talk__meta">
-                    <em>{talk.data.venue}</em>
-                    {talk.data.location && <> &middot; {talk.data.location}</>}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      ))
-    }
-  </div>
+  {
+    years.map(([year, talks]) => (
+      <section>
+        <h2 class="year">{year}</h2>
+        <ul class="talks">
+          {talks.map((talk) => {
+            const thumb = thumbFor(talk.data.youtube);
+            return (
+              <li class="talk">
+                <a class="talk__link" href={talk.data.permalink}>
+                  {thumb ? (
+                    <span class="talk__thumb">
+                      <Image
+                        src={thumb}
+                        alt=""
+                        widths={[320, 640]}
+                        sizes="(max-width: 30rem) 100vw, 20rem"
+                        loading="lazy"
+                      />
+                      <span class="talk__play" aria-hidden="true" />
+                    </span>
+                  ) : (
+                    <span class="talk__thumb talk__thumb--empty" aria-hidden="true" />
+                  )}
+                  <span class="talk__title">{talk.data.title}</span>
+                </a>
+                <div class="talk__meta">
+                  <em>{talk.data.venue}</em>
+                  {talk.data.location && <> &middot; {talk.data.location}</>}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))
+  }
 </Base>
