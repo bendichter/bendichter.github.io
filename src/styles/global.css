@@ -8,7 +8,7 @@
 
   --ink: #16181d;
   --muted: #565e70;
-  --faint: #838b9a;
+  --faint: #69707c;
   --rule: #e3e6ee;
   --bg: #fcfcfd;
   --panel: #f3f5f9;
@@ -21,14 +21,16 @@
     each year, the software list, the tag chips, the bar across the top. Ordered
     so that adjacent steps stay distinguishable for the ~8% of male readers with
     a red-green color vision deficiency, which is why the ramp runs through blue
-    and teal rather than red to green.
+    and teal rather than red to green. Each value is dark enough to hold 4.5:1
+    contrast as text over its own strongest wash (the 16% hover tint on the
+    software list), since these double as link and chip colors.
   */
   --c1: #3355cc;
-  --c2: #1d74b8;
-  --c3: #0d8a92;
-  --c4: #38863f;
-  --c5: #b3781a;
-  --c6: #b8492f;
+  --c2: #1a68a6;
+  --c3: #0b7077;
+  --c4: #307336;
+  --c5: #8a5c14;
+  --c6: #ab442c;
 
   /* Content width, shared by every page. */
   --measure: 58rem;
