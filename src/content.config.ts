@@ -36,6 +36,8 @@ const posts = defineCollection({
     permalink,
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    /** Meta description and social card text. Falls back to the title. */
+    description: z.string().max(200).optional(),
   }),
 });
 

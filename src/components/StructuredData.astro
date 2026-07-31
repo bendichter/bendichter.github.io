@@ -1,0 +1,71 @@
+---
+import { site, socials } from "../data/site";
+
+/**
+ * JSON-LD. The Jekyll theme emitted a Person block and it was lost in the
+ * rebuild, so the site had no structured data at all. This is what search
+ * engines read to connect the domain to a named person and to understand that
+ * a post is an article with an author and a date, rather than a page of text.
+ */
+interface Props {
+  type?: "website" | "article";
+  title?: string;
+  description?: string;
+  published?: Date;
+  image?: string;
+}
+
+const { type = "website", title, description, published, image } = Astro.props;
+
+const url = new URL(Astro.url.pathname, site.url).href;
+const person = {
+  "@type": "Person",
+  "@id": `${site.url}/#person`,
+  name: site.name,
+  alternateName: site.title,
+  url: site.url,
+  email: site.email,
+  image: new URL(site.avatar, site.url).href,
+  jobTitle: "Research Software Engineer",
+  worksFor: { "@type": "Organization", name: "CatalystNeuro", url: "https://catalystneuro.com" },
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "University of California, Berkeley" },
+    { "@type": "CollegeOrUniversity", name: "University of California, San Francisco" },
+    { "@type": "CollegeOrUniversity", name: "University of Pittsburgh" },
+  ],
+  identifier: `https://orcid.org/${site.orcid}`,
+  sameAs: socials.filter((s) => s.href.startsWith("http")).map((s) => s.href),
+};
+
+const graph =
+  type === "article"
+    ? [
+        person,
+        {
+          "@type": "BlogPosting",
+          headline: title,
+          description,
+          url,
+          mainEntityOfPage: url,
+          datePublished: published?.toISOString(),
+          author: { "@id": `${site.url}/#person` },
+          publisher: { "@id": `${site.url}/#person` },
+          ...(image ? { image: new URL(image, site.url).href } : {}),
+        },
+      ]
+    : [
+        person,
+        {
+          "@type": "WebSite",
+          url: site.url,
+          name: site.title,
+          description: site.description,
+          publisher: { "@id": `${site.url}/#person` },
+        },
+      ];
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": graph })}
+/>

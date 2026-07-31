@@ -4,7 +4,14 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://bendichter.com",
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Tag archives are noindexed as thin duplicates of /posts/, and the
+      // privacy page is not something anyone should arrive at from search.
+      // A sitemap should list what you want indexed, nothing else.
+      filter: (page) => !/\/(tags|terms)\//.test(page),
+    }),
+  ],
 
   // URLs the Jekyll site published that no longer match a permalink. On a
   // static build these become meta-refresh pages, which is what Jekyll's

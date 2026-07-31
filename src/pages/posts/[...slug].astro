@@ -20,7 +20,11 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Base title={post.data.title} description={`${post.data.title} - a post by Ben Dichter.`}>
+<Base
+  title={post.data.title}
+  description={post.data.description ?? `${post.data.title}. A post by Ben Dichter.`}
+  article={{ published: post.data.date }}
+>
   <article class="prose">
     <h1>{post.data.title}</h1>
     <div class="article__meta">{formatDate(post.data.date)}</div>

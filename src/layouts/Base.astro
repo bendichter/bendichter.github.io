@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { site, nav, socials } from "../data/site";
 import Profile from "../components/Profile.astro";
 import Icon from "../components/Icon.astro";
+import StructuredData from "../components/StructuredData.astro";
 
 interface Props {
   title?: string;
@@ -15,9 +16,19 @@ interface Props {
    * footer instead, so they are still reachable from everywhere.
    */
   sidebar?: boolean;
+  /** Emits BlogPosting structured data instead of WebSite. */
+  article?: { published: Date };
+  /** Keeps thin archive pages out of the index. */
+  noindex?: boolean;
 }
 
-const { title, description = site.description, sidebar = false } = Astro.props;
+const {
+  title,
+  description = site.description,
+  sidebar = false,
+  article,
+  noindex = false,
+} = Astro.props;
 
 const pageTitle = title ? `${title} - ${site.title}` : site.title;
 const canonical = new URL(Astro.url.pathname, site.url);
@@ -33,6 +44,14 @@ const path = Astro.url.pathname;
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <StructuredData
+      type={article ? "article" : "website"}
+      title={title}
+      description={description}
+      published={article?.published}
+    />
 
     {/* One block, always emitted. The Jekyll theme only set og:image when a
         page declared a header image, and used a relative path when it did. */}
