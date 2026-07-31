@@ -12,7 +12,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "publications": "node scripts/fetch-publications.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "thumbnails": "node scripts/fetch-thumbnails.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

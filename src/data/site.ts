@@ -13,6 +13,7 @@ export const site = {
 };
 
 export const nav = [
+  { title: "Software", href: "/software/" },
   { title: "Publications", href: "/publications/" },
   { title: "Talks", href: "/talks/" },
   { title: "Blog", href: "/posts/" },
@@ -33,69 +34,84 @@ export const socials = [
   { title: "X", href: "https://x.com/BenDichter", icon: "x" },
 ];
 
+export type Project = {
+  name: string;
+  /** Primary destination for the card: the live thing if there is one. */
+  href: string;
+  /** Shown as a second link when the project is also on GitHub. */
+  repo?: string;
+  kind: "app" | "tool";
+  /** Language or platform, shown as a chip. */
+  lang: string;
+  stars?: number;
+  /** Short factual notes rendered under the blurb, e.g. "42 moves". */
+  facts?: string[];
+  blurb: string;
+};
+
 /**
  * Side projects, as data rather than prose. Deliberately excludes the
  * neuroscience work: that is CatalystNeuro's and lives at catalystneuro.com.
- * `lang` and `stars` are written by hand rather than fetched, so the page has
- * no runtime JavaScript and no dependency on the GitHub API at build time.
+ * `lang` and `stars` are written by hand rather than fetched, so the page ships
+ * no runtime JavaScript and the build does not depend on the GitHub API.
  */
-export const software = [
+export const projects: Project[] = [
+  {
+    name: "westie.wiki",
+    href: "https://westie.wiki",
+    kind: "app",
+    lang: "Web app",
+    facts: ["42 moves", "127 video clips", "57 dancers"],
+    blurb:
+      "A community wiki for West Coast Swing moves, edited Wikipedia-style. Every move gets aliases, variants, and related patterns, and any YouTube dance can be marked up move by move so the timeline follows along with the video. Descriptive rather than prescriptive: it records how the community actually dances.",
+  },
+  {
+    name: "Invisible String",
+    href: "https://invisiblestringapp.com",
+    kind: "app",
+    lang: "iOS and Android",
+    blurb:
+      "Finds the moments a couple was in the same place before they ever met. Matching runs on photo metadata, processed on the device, and pairing works from a code with no account, so the photos never leave the phone.",
+  },
+  {
+    name: "ReachMyReps",
+    href: "https://reachmyreps.com",
+    kind: "app",
+    lang: "Web app",
+    blurb:
+      "Look up your representatives at every level of government from an address, draft a letter about an issue with AI assistance, then edit it and send it. The tedious parts are automated and the message stays yours.",
+  },
+  {
+    name: "Clnk",
+    href: "https://github.com/bendichter/clnk",
+    repo: "https://github.com/bendichter/clnk",
+    kind: "app",
+    lang: "Swift",
+    blurb:
+      "An iOS app for finding and sharing cocktails at nearby bars, with ratings, photos, and maps.",
+  },
   {
     name: "brokenaxes",
     href: "https://github.com/bendichter/brokenaxes",
+    repo: "https://github.com/bendichter/brokenaxes",
+    kind: "tool",
     lang: "Python",
     stars: 573,
     blurb:
       "A matplotlib package for plots with a broken axis, for when one outlier or one long gap would otherwise flatten everything else on the chart.",
   },
   {
-    name: "tenseflow",
-    href: "https://github.com/bendichter/tenseflow",
-    lang: "Python",
-    stars: 41,
-    blurb:
-      "Changes the tense of any English text, which turns out to be harder than a verb lookup because agreement, auxiliaries, and irregulars all have to move together.",
-  },
-  {
-    name: "code-crafter",
-    href: "https://github.com/bendichter/code-crafter",
-    lang: "Python",
-    blurb:
-      "Programmatic edits to Python source through its abstract syntax tree, so a large mechanical refactor can be scripted instead of hand-applied.",
-  },
-  {
-    name: "RepoSearch",
-    href: "https://github.com/bendichter/repo-search",
-    lang: "Python",
-    blurb:
-      "Semantic search across a GitHub repository. Chunks the source, embeds it, and stores the vectors so you can search by meaning rather than by exact string.",
-  },
-  {
     name: "activity-tracker",
     href: "https://github.com/bendichter/activity-tracker",
+    repo: "https://github.com/bendichter/activity-tracker",
+    kind: "tool",
     lang: "Python",
     blurb:
       "Pulls Google Workspace, GitHub, and Calendar activity into a single week view, which makes it obvious where the time actually went.",
   },
-  {
-    name: "hdfpath",
-    href: "https://github.com/bendichter/hdfpath",
-    lang: "Python",
-    blurb:
-      "XPath for HDF5. Selects datasets and groups out of a deep hierarchy with a path expression instead of nested loops.",
-  },
-  {
-    name: "colorpanel",
-    href: "https://github.com/bendichter/colorpanel",
-    lang: "Python",
-    blurb:
-      "Colormaps for when one dimension is not enough, mapping a pair of values onto a single color rather than stacking two plots.",
-  },
-  {
-    name: "Clnk",
-    href: "https://github.com/bendichter/clnk",
-    lang: "Swift",
-    blurb:
-      "An iOS app for finding and sharing cocktails at nearby bars, with ratings, photos, and maps.",
-  },
 ];
+
+/** The shorter homepage list, derived so the two never drift apart. */
+export const software = ["westie.wiki", "Invisible String", "brokenaxes", "ReachMyReps"]
+  .map((name) => projects.find((p) => p.name === name)!)
+  .filter(Boolean);

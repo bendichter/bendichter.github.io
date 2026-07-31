@@ -1,31 +1,77 @@
 ---
+import { Image } from "astro:assets";
 import Base from "../../layouts/Base.astro";
 import { getTalks, groupByYear, formatDate } from "../../lib/content";
+
+/**
+ * Thumbnails are pulled from YouTube once by scripts/fetch-thumbnails.mjs and
+ * committed, rather than hotlinked. That keeps the page working if a video is
+ * made private, lets Astro resize and convert them to WebP, and means no
+ * request leaves for youtube.com until a reader actually clicks through.
+ */
+const thumbs = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/talks/*.jpg",
+  { eager: true },
+);
+
+const thumbFor = (youtube?: string) =>
+  youtube ? thumbs[`../../assets/talks/${youtube}.jpg`]?.default : undefined;
 
 const years = groupByYear(await getTalks());
 ---
 
-<Base title="Talks" description="Talks and presentations by Ben Dichter.">
-  <h1>Talks and presentations</h1>
-  {
-    years.map(([year, talks]) => (
-      <section>
-        <h2 class="year">{year}</h2>
-        <ul class="entries">
-          {talks.map((talk) => (
-            <li>
-              <a class="entry__title" href={talk.data.permalink}>
-                {talk.data.title}
-              </a>
-              <div class="entry__meta">
-                <em>{talk.data.venue}</em>
-                {talk.data.location && <> &middot; {talk.data.location}</>} &middot;{" "}
-                {formatDate(talk.data.date)}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))
-  }
+<Base
+  title="Talks"
+  description="Talks and presentations by Ben Dichter on NWB, DANDI, and working with LLMs."
+  sidebar={false}
+>
+  <div class="wide">
+    <h1>Talks and presentations</h1>
+
+    <p class="lede">
+      Mostly workshop sessions on NWB and the DANDI Archive, and more recently on
+      working with LLMs and agents. Recordings are on the{" "}
+      <a href="https://www.youtube.com/c/NeurodataWithoutBorders">
+        Neurodata Without Borders channel</a
+      >.
+    </p>
+
+    {
+      years.map(([year, talks]) => (
+        <section>
+          <h2 class="year">{year}</h2>
+          <ul class="talks">
+            {talks.map((talk) => {
+              const thumb = thumbFor(talk.data.youtube);
+              return (
+                <li class="talk">
+                  <a class="talk__link" href={talk.data.permalink}>
+                    {thumb ? (
+                      <span class="talk__thumb">
+                        <Image
+                          src={thumb}
+                          alt=""
+                          widths={[320, 640]}
+                          sizes="(max-width: 30rem) 100vw, 20rem"
+                          loading="lazy"
+                        />
+                        <span class="talk__play" aria-hidden="true" />
+                      </span>
+                    ) : (
+                      <span class="talk__thumb talk__thumb--empty" aria-hidden="true" />
+                    )}
+                    <span class="talk__title">{talk.data.title}</span>
+                  </a>
+                  <div class="talk__meta">
+                    <em>{talk.data.venue}</em>
+                    {talk.data.location && <> &middot; {talk.data.location}</>}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
 </Base>

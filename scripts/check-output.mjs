@@ -40,9 +40,19 @@ function titleProblems(html) {
   return [];
 }
 
-/** Every content image should carry alt text, even if it is empty by choice. */
+/**
+ * Every content image should carry alt, even when it is deliberately empty
+ * because the image is decorative and its link already has a text label.
+ *
+ * The attribute has to be matched in both forms: the minifier rewrites the
+ * empty `alt=""` that Astro emits into a bare `alt`, which is valid HTML and
+ * which assistive technology reads as empty alt, so requiring `alt=` here
+ * reports every decorative image as a fault.
+ */
 function imagesWithoutAlt(html) {
-  return [...html.matchAll(/<img\b(?![^>]*\balt=)[^>]*>/g)].map((m) => m[0].slice(0, 90));
+  return [...html.matchAll(/<img\b(?![^>]*\salt(?=[\s=>/]))[^>]*>/g)].map((m) =>
+    m[0].slice(0, 90),
+  );
 }
 
 const CHECKS = [

@@ -534,6 +534,169 @@ a.entry__title:hover {
   white-space: nowrap;
 }
 
+/* ---- project cards -------------------------------------------------- */
+
+/* The software page drops the profile column, so its main can run wider than
+   the reading measure the prose pages are held to. */
+.wide {
+  max-width: 58rem;
+}
+
+.group__blurb {
+  color: var(--muted);
+  margin: -0.35rem 0 1.5rem;
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+
+.card {
+  --step: var(--c1);
+  display: flex;
+  flex-direction: column;
+  padding: 1.15rem 1.25rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--step);
+  border-radius: 4px 4px 10px 10px;
+  background: var(--bg);
+  transition:
+    border-color 0.14s ease,
+    box-shadow 0.14s ease,
+    transform 0.14s ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--step) 45%, var(--rule));
+  box-shadow: 0 6px 20px -12px color-mix(in srgb, var(--step) 70%, transparent);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+}
+
+.cards li:nth-child(6n + 1) { --step: var(--c1); }
+.cards li:nth-child(6n + 2) { --step: var(--c2); }
+.cards li:nth-child(6n + 3) { --step: var(--c3); }
+.cards li:nth-child(6n + 4) { --step: var(--c4); }
+.cards li:nth-child(6n + 5) { --step: var(--c5); }
+.cards li:nth-child(6n + 6) { --step: var(--c6); }
+
+.card__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.card__name {
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  margin: 0;
+}
+
+.card__name a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* Stretch the title's hit area over the whole card, so the card is one target
+   while the source link below stays separately clickable. */
+.card__name a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover .card__name a {
+  color: var(--step);
+}
+
+.card__stars {
+  font-size: 0.76rem;
+  color: var(--faint);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.card__lang {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  font-size: 0.71rem;
+  font-weight: 550;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--step);
+  background: color-mix(in srgb, var(--step) 11%, transparent);
+  border-radius: 999px;
+  padding: 0.13rem 0.55rem;
+}
+
+.card__blurb {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.card__facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.85rem;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--faint);
+}
+
+.card__facts li::before {
+  content: "";
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: var(--step);
+  margin-right: 0.4rem;
+  vertical-align: 0.12em;
+}
+
+.card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* Above the title's stretched overlay, so these stay individually clickable. */
+.card__links a {
+  position: relative;
+  z-index: 1;
+  color: var(--step);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card__links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .software a:hover {
   text-decoration: underline;
   text-underline-offset: 2.5px;
@@ -544,6 +707,112 @@ a.entry__title:hover {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+/* ---- talk thumbnails ------------------------------------------------ */
+
+.talks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.75rem 1.35rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.talk__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.talk__thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 9px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+}
+
+.talk__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.talk__link:hover .talk__thumb img {
+  transform: scale(1.035);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .talk__thumb img {
+    transition: none;
+  }
+  .talk__link:hover .talk__thumb img {
+    transform: none;
+  }
+}
+
+/* A play badge, drawn rather than loaded, so it costs nothing. */
+.talk__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(2px);
+  transition: background 0.2s ease;
+}
+
+.talk__play::after {
+  content: "";
+  position: absolute;
+  left: 54%;
+  top: 50%;
+  translate: -50% -50%;
+  border-style: solid;
+  border-width: 0.42rem 0 0.42rem 0.7rem;
+  border-color: transparent transparent transparent #fff;
+}
+
+.talk__link:hover .talk__play {
+  background: var(--accent);
+}
+
+.talk__thumb--empty {
+  display: grid;
+  place-items: center;
+}
+
+.talk__title {
+  display: block;
+  margin-top: 0.7rem;
+  font-weight: 550;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.talk__link:hover .talk__title {
+  color: var(--accent);
+}
+
+.talk__meta {
+  color: var(--faint);
+  font-size: 0.83rem;
+  margin-top: 0.25rem;
+  line-height: 1.45;
+}
+
+.talk__meta em {
+  font-style: normal;
+  color: var(--muted);
 }
 
 /* ---- article -------------------------------------------------------- */
