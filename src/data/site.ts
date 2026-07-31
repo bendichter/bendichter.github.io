@@ -115,3 +115,17 @@ export const projects: Project[] = [
 export const software = ["westie.wiki", "Invisible String", "brokenaxes", "ReachMyReps"]
   .map((name) => projects.find((p) => p.name === name)!)
   .filter(Boolean);
+
+/**
+ * Drone footage from https://www.youtube.com/@bendichter4116. Titles are
+ * shortened to the place, since the channel titles repeat the word "drone" and
+ * the section heading already says it.
+ */
+export const drone = [
+  { id: "apq4ZvhcYOI", place: "Mt. Etna", where: "Sicily, Italy" },
+  { id: "-xGrDdiKZQA", place: "São Miguel", where: "Azores, Portugal" },
+  { id: "tlNK29L03yY", place: "Donner Lake", where: "California" },
+  { id: "1S9lE6r9FaY", place: "Antigua", where: "Guatemala" },
+  { id: "-oon8rKAKFE", place: "Cap Cana", where: "Dominican Republic" },
+  { id: "jBLk7889uZ4", place: "Tugboat Beach", where: "Curaçao" },
+];

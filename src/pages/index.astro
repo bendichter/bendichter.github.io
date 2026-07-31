@@ -1,7 +1,13 @@
 ---
+import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
-import { software } from "../data/site";
+import { software, drone } from "../data/site";
 import { getPosts, formatDate } from "../lib/content";
+
+const droneThumbs = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/drone/*.jpg",
+  { eager: true },
+);
 
 const recent = (await getPosts()).slice(0, 3);
 ---
@@ -123,4 +129,37 @@ const recent = (await getPosts()).slice(0, 3);
     also built <a href="https://westie.wiki">westie.wiki</a>, a community wiki for
     West Coast Swing moves.
   </p>
+
+  <p>
+    I fly a drone when I travel. A few of the results are on{" "}
+    <a href="https://www.youtube.com/@bendichter4116">my YouTube channel</a>:
+  </p>
+
+  <ul class="reel">
+    {
+      drone.map((clip) => {
+        const thumb = droneThumbs[`../assets/drone/${clip.id}.jpg`]?.default;
+        return (
+          <li>
+            <a href={`https://www.youtube.com/watch?v=${clip.id}`}>
+              <span class="reel__thumb">
+                {thumb && (
+                  <Image
+                    src={thumb}
+                    alt=""
+                    widths={[240, 480]}
+                    sizes="(max-width: 30rem) 45vw, 14rem"
+                    loading="lazy"
+                  />
+                )}
+                <span class="talk__play" aria-hidden="true" />
+              </span>
+              <span class="reel__place">{clip.place}</span>
+              <span class="reel__where">{clip.where}</span>
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
 </Base>
