@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Claude Code worktrees and session files
+.claude/
+
+# stale Jekyll output, kept ignored so an old checkout does not resurface it
+_site/
