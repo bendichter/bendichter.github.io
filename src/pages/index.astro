@@ -38,11 +38,25 @@ const recent = (await getPosts()).slice(0, 3);
 
   <h2>Software</h2>
 
+  <p>
+    Side projects, the things I build outside of work. The neuroscience software is
+    CatalystNeuro's and lives at{" "}
+    <a href="https://catalystneuro.com">catalystneuro.com</a>.
+  </p>
+
   <ul class="software">
     {
       software.map((s) => (
         <li>
-          <a href={s.href}>{s.name}</a>
+          <div class="software__head">
+            <a href={s.href}>{s.name}</a>
+            <span class="software__tag">{s.lang}</span>
+            {s.stars && (
+              <span class="software__stars" title={`${s.stars} stars on GitHub`}>
+                ★ {s.stars}
+              </span>
+            )}
+          </div>
           <p>{s.blurb}</p>
         </li>
       ))

@@ -33,47 +33,69 @@ export const socials = [
   { title: "X", href: "https://x.com/BenDichter", icon: "x" },
 ];
 
-/** The homepage software list, as data rather than prose. */
+/**
+ * Side projects, as data rather than prose. Deliberately excludes the
+ * neuroscience work: that is CatalystNeuro's and lives at catalystneuro.com.
+ * `lang` and `stars` are written by hand rather than fetched, so the page has
+ * no runtime JavaScript and no dependency on the GitHub API at build time.
+ */
 export const software = [
-  {
-    name: "Neurodata Without Borders",
-    href: "https://nwb.org",
-    blurb:
-      "A data standard for neurophysiology, covering electrophysiology, optical physiology, behavior, and the metadata that makes a dataset reusable.",
-  },
-  {
-    name: "DANDI Archive",
-    href: "https://dandiarchive.org",
-    blurb:
-      "A public archive for neurophysiology datasets, with versioning and programmatic access.",
-  },
-  {
-    name: "NeuroConv",
-    href: "https://github.com/catalystneuro/neuroconv",
-    blurb:
-      "Converts data from a wide range of acquisition systems into NWB, which is usually the hardest part of adopting the standard.",
-  },
-  {
-    name: "nwbwidgets",
-    href: "https://github.com/NeurodataWithoutBorders/nwbwidgets",
-    blurb:
-      "Interactive Jupyter widgets for exploring the contents of an NWB file without writing plotting code.",
-  },
-  {
-    name: "Neurosift",
-    href: "https://github.com/flatironinstitute/neurosift",
-    blurb:
-      "Browser-based visualization of NWB files and DANDI datasets, with no local installation.",
-  },
-  {
-    name: "SpikeInterface",
-    href: "https://github.com/SpikeInterface/spikeinterface",
-    blurb:
-      "A unified interface to spike sorting algorithms and extracellular recording formats.",
-  },
   {
     name: "brokenaxes",
     href: "https://github.com/bendichter/brokenaxes",
-    blurb: "A small matplotlib package for plots with a broken axis.",
+    lang: "Python",
+    stars: 573,
+    blurb:
+      "A matplotlib package for plots with a broken axis, for when one outlier or one long gap would otherwise flatten everything else on the chart.",
+  },
+  {
+    name: "tenseflow",
+    href: "https://github.com/bendichter/tenseflow",
+    lang: "Python",
+    stars: 41,
+    blurb:
+      "Changes the tense of any English text, which turns out to be harder than a verb lookup because agreement, auxiliaries, and irregulars all have to move together.",
+  },
+  {
+    name: "code-crafter",
+    href: "https://github.com/bendichter/code-crafter",
+    lang: "Python",
+    blurb:
+      "Programmatic edits to Python source through its abstract syntax tree, so a large mechanical refactor can be scripted instead of hand-applied.",
+  },
+  {
+    name: "RepoSearch",
+    href: "https://github.com/bendichter/repo-search",
+    lang: "Python",
+    blurb:
+      "Semantic search across a GitHub repository. Chunks the source, embeds it, and stores the vectors so you can search by meaning rather than by exact string.",
+  },
+  {
+    name: "activity-tracker",
+    href: "https://github.com/bendichter/activity-tracker",
+    lang: "Python",
+    blurb:
+      "Pulls Google Workspace, GitHub, and Calendar activity into a single week view, which makes it obvious where the time actually went.",
+  },
+  {
+    name: "hdfpath",
+    href: "https://github.com/bendichter/hdfpath",
+    lang: "Python",
+    blurb:
+      "XPath for HDF5. Selects datasets and groups out of a deep hierarchy with a path expression instead of nested loops.",
+  },
+  {
+    name: "colorpanel",
+    href: "https://github.com/bendichter/colorpanel",
+    lang: "Python",
+    blurb:
+      "Colormaps for when one dimension is not enough, mapping a pair of values onto a single color rather than stacking two plots.",
+  },
+  {
+    name: "Clnk",
+    href: "https://github.com/bendichter/clnk",
+    lang: "Swift",
+    blurb:
+      "An iOS app for finding and sharing cocktails at nearby bars, with ratings, photos, and maps.",
   },
 ];

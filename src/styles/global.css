@@ -7,13 +7,28 @@
   color-scheme: light dark;
 
   --ink: #16181d;
-  --muted: #596070;
-  --faint: #878e9c;
-  --rule: #e4e7ec;
-  --bg: #fdfdfc;
-  --panel: #f4f5f7;
-  --accent: #1a5fb4;
-  --accent-soft: #e8f0fb;
+  --muted: #565e70;
+  --faint: #838b9a;
+  --rule: #e3e6ee;
+  --bg: #fcfcfd;
+  --panel: #f3f5f9;
+
+  --accent: #3355cc;
+  --accent-soft: #e8edfd;
+
+  /*
+    A six-step spectrum used to give sections their own identity: the rule under
+    each year, the software list, the tag chips, the bar across the top. Ordered
+    so that adjacent steps stay distinguishable for the ~8% of male readers with
+    a red-green color vision deficiency, which is why the ramp runs through blue
+    and teal rather than red to green.
+  */
+  --c1: #3355cc;
+  --c2: #1d74b8;
+  --c3: #0d8a92;
+  --c4: #38863f;
+  --c5: #b3781a;
+  --c6: #b8492f;
 
   --measure: 40rem;
   --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter,
@@ -24,14 +39,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #e8eaed;
-    --muted: #a2aab8;
-    --faint: #79818f;
-    --rule: #2a2e36;
-    --bg: #121419;
-    --panel: #1a1d23;
-    --accent: #7cb0f5;
-    --accent-soft: #1b2735;
+    --ink: #e9ebef;
+    --muted: #a7aebc;
+    --faint: #7d8593;
+    --rule: #2b3039;
+    --bg: #111318;
+    --panel: #191c23;
+
+    --accent: #7d9dfa;
+    --accent-soft: #1b2436;
+
+    /* Lifted in lightness and dropped in saturation so they hold up on a dark
+       background without vibrating against it. */
+    --c1: #7d9dfa;
+    --c2: #57aae8;
+    --c3: #35bcc0;
+    --c4: #63bd68;
+    --c5: #dcae5c;
+    --c6: #e8836a;
   }
 }
 
@@ -180,6 +205,23 @@ hr {
   position: sticky;
   top: 0;
   z-index: 5;
+}
+
+/* The spectrum as a hairline across the top, so the palette is stated once at
+   full strength and used in dilute form everywhere else. */
+.masthead::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c4),
+    var(--c5),
+    var(--c6)
+  );
 }
 
 .masthead .shell {
@@ -361,11 +403,32 @@ main > :first-child {
   font-weight: 650;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--step, var(--faint));
   margin: 2.75rem 0 1rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
 }
+
+/* A dot in the year's spectrum step, so a long archive reads as banded rather
+   than as one undifferentiated column. */
+.year::before {
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+section:nth-of-type(6n + 1) > .year { --step: var(--c1); }
+section:nth-of-type(6n + 2) > .year { --step: var(--c2); }
+section:nth-of-type(6n + 3) > .year { --step: var(--c3); }
+section:nth-of-type(6n + 4) > .year { --step: var(--c4); }
+section:nth-of-type(6n + 5) > .year { --step: var(--c5); }
+section:nth-of-type(6n + 6) > .year { --step: var(--c6); }
 
 section:first-of-type > .year {
   margin-top: 2rem;
@@ -414,22 +477,61 @@ a.entry__title:hover {
 }
 
 .software li {
-  padding: 0.75rem 0.95rem;
-  border-radius: 9px;
-  border: 1px solid transparent;
-  transition:
-    background 0.12s ease,
-    border-color 0.12s ease;
+  padding: 0.7rem 0.95rem;
+  border-radius: 0 9px 9px 0;
+  border-left: 3px solid var(--step, var(--rule));
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--step) 7%, transparent),
+    transparent 65%
+  );
+  transition: background 0.14s ease;
 }
 
 .software li:hover {
-  background: var(--panel);
-  border-color: var(--rule);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--step) 16%, transparent),
+    transparent 80%
+  );
+}
+
+/* Each project takes the next step along the spectrum. */
+.software li:nth-child(6n + 1) { --step: var(--c1); }
+.software li:nth-child(6n + 2) { --step: var(--c2); }
+.software li:nth-child(6n + 3) { --step: var(--c3); }
+.software li:nth-child(6n + 4) { --step: var(--c4); }
+.software li:nth-child(6n + 5) { --step: var(--c5); }
+.software li:nth-child(6n + 6) { --step: var(--c6); }
+
+.software__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.55rem;
 }
 
 .software a {
   font-weight: 550;
   text-decoration: none;
+  color: var(--step, var(--accent));
+}
+
+.software__tag {
+  font-size: 0.72rem;
+  font-weight: 550;
+  letter-spacing: 0.03em;
+  color: var(--step, var(--muted));
+  background: color-mix(in srgb, var(--step) 12%, transparent);
+  border-radius: 999px;
+  padding: 0.08rem 0.5rem;
+}
+
+.software__stars {
+  font-size: 0.76rem;
+  color: var(--faint);
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .software a:hover {
