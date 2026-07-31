@@ -1,6 +1,14 @@
 [
   {
-    "_comment": "Works that are not in the ORCID record yet. Every entry here is a gap in ORCID, so the right fix is to add it there (which helps everywhere, not just this site) and delete the entry from this file. The build prints how many are left. `aliases` lets an entry absorb a preprint that ORCID lists under a different title.",
+    "_comment": "Works that are missing from the ORCID record, or that ORCID still lists in an earlier form. Every entry here is a gap in ORCID, so the right fix is to add or update it there (which helps everywhere, not just this site) and delete the entry from this file. `aliases` lets an entry absorb an ORCID record whose title differs; a matching title alone is enough when only the version differs.",
+    "title": "Facilitating analysis of open neurophysiology data on the DANDI Archive using large language model tools",
+    "journal": "Scientific Data",
+    "type": "journal-article",
+    "year": 2025,
+    "url": "https://www.nature.com/articles/s41597-025-06285-x",
+    "doi": "10.1038/s41597-025-06285-x"
+  },
+  {
     "title": "Unifying community whole-brain imaging datasets enables robust neuron identification and reveals determinants of neuron position in C. elegans",
     "journal": "Cell Reports Methods",
     "type": "journal-article",
