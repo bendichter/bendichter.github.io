@@ -13,7 +13,8 @@
     "check": "astro check",
     "publications": "node scripts/fetch-publications.mjs",
     "astro": "astro",
-    "thumbnails": "node scripts/fetch-thumbnails.mjs"
+    "thumbnails": "node scripts/fetch-thumbnails.mjs",
+    "icons": "node scripts/make-icons.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

@@ -55,6 +55,32 @@ function imagesWithoutAlt(html) {
   );
 }
 
+/**
+ * Every local file the HTML points at has to exist in dist.
+ *
+ * This is the check that would have caught the Jekyll site declaring eighteen
+ * favicon and touch-icon files it never generated, and the prototype's own
+ * apple-touch-icon reference surviving a branch that predated the icons.
+ * A broken asset reference is invisible in the page source and silent in the
+ * browser, so nothing short of looking at the output finds it.
+ */
+async function missingLocalAssets(html, file, exists) {
+  const refs = [...html.matchAll(/(?:href|src)="(\/[^"#?]*)["#?]/g)].map((m) => m[1]);
+  const bad = [];
+  for (const ref of new Set(refs)) {
+    if (ref.startsWith("//")) continue;
+    const target = decodeURIComponent(ref.replace(/\/$/, "")) || "/index.html";
+    if (
+      !(await exists(target)) &&
+      !(await exists(`${target}/index.html`)) &&
+      !(await exists(`${target}.html`))
+    ) {
+      bad.push(ref);
+    }
+  }
+  return bad;
+}
+
 const CHECKS = [
   ["text runs into a link with no space", missingSpacesAroundInlineTags],
   ["title tag", titleProblems],
@@ -64,6 +90,21 @@ const CHECKS = [
 let failures = 0;
 let pages = 0;
 
+const { stat } = await import("node:fs/promises");
+const seen = new Map();
+const exists = async (p) => {
+  const key = p.replace(/^\//, "");
+  if (!seen.has(key)) {
+    seen.set(
+      key,
+      stat(new URL(key, DIST))
+        .then(() => true)
+        .catch(() => false),
+    );
+  }
+  return seen.get(key);
+};
+
 for await (const file of glob("**/*.html", { cwd: DIST })) {
   const html = await readFile(new URL(file, DIST), "utf8");
   pages++;
@@ -72,6 +113,10 @@ for await (const file of glob("**/*.html", { cwd: DIST })) {
       console.error(`  ${file}: ${label}\n    ${hit}`);
       failures++;
     }
+  }
+  for (const ref of await missingLocalAssets(html, file, exists)) {
+    console.error(`  ${file}: references a file that does not exist\n    ${ref}`);
+    failures++;
   }
 }
 

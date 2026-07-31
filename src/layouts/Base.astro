@@ -37,8 +37,13 @@ const path = Astro.url.pathname;
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary" />
 
+    {/* Generated from images/profile.jpeg by scripts/make-icons.mjs. Kept to
+        the four declarations that modern browsers actually read, rather than
+        the eighteen the Jekyll theme emitted for files that never existed. */}
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/images/favicon-96x96.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="alternate" type="application/rss+xml" title={site.title} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
