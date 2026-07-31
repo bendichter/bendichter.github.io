@@ -71,6 +71,6 @@ If you are considering a path like this, or just want to hear how it has gone, f
 out at [ben.dichter@catalystneuro.com](mailto:ben.dichter@catalystneuro.com). I am happy to talk
 about it.
 
-## Beyond the Lab
+## Outside Work
 
-Outside of work I dance West Coast Swing and travel as much as I can manage.
+I dance West Coast Swing and travel as much as I can manage.
