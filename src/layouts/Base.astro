@@ -20,6 +20,8 @@ interface Props {
   article?: { published: Date };
   /** Keeps thin archive pages out of the index. */
   noindex?: boolean;
+  /** Path to this page's generated social card, e.g. /og/posts-foo.png. */
+  ogImage?: string;
 }
 
 const {
@@ -28,11 +30,13 @@ const {
   sidebar = false,
   article,
   noindex = false,
+  ogImage,
 } = Astro.props;
 
 const pageTitle = title ? `${title} - ${site.title}` : site.title;
 const canonical = new URL(Astro.url.pathname, site.url);
-const ogImage = new URL(site.avatar, site.url);
+// A page's own card when it has one, the profile photo otherwise.
+const ogImageUrl = new URL(ogImage ?? site.avatar, site.url);
 const path = Astro.url.pathname;
 ---
 
@@ -51,17 +55,21 @@ const path = Astro.url.pathname;
       title={title}
       description={description}
       published={article?.published}
+      image={ogImage}
     />
 
     {/* One block, always emitted. The Jekyll theme only set og:image when a
         page declared a header image, and used a relative path when it did. */}
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={article ? "article" : "website"} />
     <meta property="og:site_name" content={site.title} />
     <meta property="og:title" content={title ?? site.title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={ogImage} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content={ogImage ? "1200" : "460"} />
+    <meta property="og:image:height" content={ogImage ? "630" : "460"} />
+    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     {/* Generated from images/profile.jpeg by scripts/make-icons.mjs. Kept to
         the four declarations that modern browsers actually read, rather than

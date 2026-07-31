@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import { getPosts, formatDate } from "../../lib/content";
+import { ogPath } from "../og/[...slug].png";
 
 /**
  * Routes come from the `permalink` in front matter rather than the filename, so
@@ -24,6 +25,7 @@ const { Content } = await render(post);
   title={post.data.title}
   description={post.data.description ?? `${post.data.title}. A post by Ben Dichter.`}
   article={{ published: post.data.date }}
+  ogImage={ogPath(post.data.permalink)}
 >
   <article class="prose">
     <h1>{post.data.title}</h1>

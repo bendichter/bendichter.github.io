@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import { getTalks, formatDate } from "../../lib/content";
+import { ogPath } from "../og/[...slug].png";
 
 export async function getStaticPaths() {
   const talks = await getTalks();
@@ -15,7 +16,11 @@ const { talk } = Astro.props;
 const { Content } = await render(talk);
 ---
 
-<Base title={talk.data.title} description={`${talk.data.title}, ${talk.data.venue}.`}>
+<Base
+  title={talk.data.title}
+  description={`${talk.data.title}, ${talk.data.venue}.`}
+  ogImage={ogPath(talk.data.permalink)}
+>
   <article class="prose">
     <h1>{talk.data.title}</h1>
     <div class="article__meta">
