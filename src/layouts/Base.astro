@@ -1,16 +1,23 @@
 ---
 import "../styles/global.css";
-import { site, nav } from "../data/site";
+import { site, nav, socials } from "../data/site";
 import Profile from "../components/Profile.astro";
+import Icon from "../components/Icon.astro";
 
 interface Props {
   title?: string;
   description?: string;
-  /** Pages that are their own full-width thing can drop the profile column. */
+  /**
+   * The profile column is the homepage's, and only the homepage's. Every other
+   * page runs full width: repeating the avatar and bio above a list of talks
+   * tells a reader nothing they did not learn on the way in, and it forced the
+   * card grids into a column too narrow for them. The social links live in the
+   * footer instead, so they are still reachable from everywhere.
+   */
   sidebar?: boolean;
 }
 
-const { title, description = site.description, sidebar = true } = Astro.props;
+const { title, description = site.description, sidebar = false } = Astro.props;
 
 const pageTitle = title ? `${title} - ${site.title}` : site.title;
 const canonical = new URL(Astro.url.pathname, site.url);
@@ -69,7 +76,7 @@ const path = Astro.url.pathname;
       </div>
     </header>
 
-    <div class="shell layout" style={sidebar ? undefined : "grid-template-columns: 1fr"}>
+    <div class:list={["shell", "layout", !sidebar && "layout--solo"]}>
       {sidebar && <Profile />}
       <main id="main">
         <slot />
@@ -78,8 +85,22 @@ const path = Astro.url.pathname;
 
     <footer class="footer">
       <div class="shell">
-        &copy; {new Date().getFullYear()} {site.name}. <a href="/terms/">Privacy</a>.{" "}
-        <a href="/rss.xml">RSS</a>. Built with <a href="https://astro.build">Astro</a>.
+        <ul class="footer__links">
+          {
+            socials.map((s) => (
+              <li>
+                <a href={s.href} rel={s.href.startsWith("http") ? "me" : undefined}>
+                  <Icon name={s.icon} />
+                  {s.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="footer__legal">
+          &copy; {new Date().getFullYear()} {site.name}. <a href="/terms/">Privacy</a>.{" "}
+          <a href="/rss.xml">RSS</a>. Built with <a href="https://astro.build">Astro</a>.
+        </p>
       </div>
     </footer>
   </body>

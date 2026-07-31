@@ -288,13 +288,26 @@ hr {
   }
 }
 
+/* Without the profile column the layout is a single track, so the reading
+   measure has to be centred rather than left-aligned against a missing one. */
+.layout--solo {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
 main {
   max-width: var(--measure);
   min-width: 0;
+  width: 100%;
 }
 
 main > :first-child {
   margin-top: 0;
+}
+
+/* Grid pages set .wide on their content, which needs the room to reach it. */
+.layout--solo:has(.wide) main {
+  max-width: 58rem;
 }
 
 /* ---- profile -------------------------------------------------------- */
@@ -984,6 +997,43 @@ a.entry__title:hover {
 
 .footer a {
   color: var(--muted);
+}
+
+/* The social links moved here when the profile column became homepage-only,
+   so they are still one click away from every page. */
+.footer__links {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+}
+
+.footer__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: var(--accent);
+}
+
+.footer__links svg {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  opacity: 0.75;
+}
+
+.footer__links a:hover svg {
+  opacity: 1;
+}
+
+.footer__legal {
+  margin: 0;
 }
 
 .skip {
