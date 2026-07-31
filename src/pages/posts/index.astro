@@ -5,8 +5,19 @@ import { getPosts, groupByYear, formatDate } from "../../lib/content";
 const years = groupByYear(await getPosts());
 ---
 
-<Base title="Blog" description="Posts by Ben Dichter.">
+<Base
+  title="Blog"
+  description="Side projects and notes from Ben Dichter, outside of his CatalystNeuro work."
+>
   <h1>Blog</h1>
+
+  <p class="lede">
+    This is where I write up side projects, the things I build outside of work. It is
+    not a good picture of where most of my time goes. The bulk of my development effort
+    is CatalystNeuro work, and that is where you should look for it:{" "}
+    <a href="https://catalystneuro.com">catalystneuro.com</a>.
+  </p>
+
   {
     years.map(([year, posts]) => (
       <section>
