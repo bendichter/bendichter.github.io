@@ -1,9 +1,16 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { getPublications, byYear } from "../../lib/publications";
+import {
+  getPublications,
+  byYear,
+  getSelected,
+  describe,
+} from "../../lib/publications";
 import { site } from "../../data/site";
 
-const years = byYear(getPublications());
+const all = getPublications();
+const selected = getSelected(all);
+const years = byYear(all);
 ---
 
 <Base title="Publications" description="Publications by Ben Dichter.">
@@ -15,10 +22,35 @@ const years = byYear(getPublications());
     <a href="https://scholar.google.com/citations?user=_IwI_oEAAAAJ">Google Scholar</a>.
   </p>
 
+  <h2>Selected</h2>
+  <ul class="entries">
+    {
+      selected.map((pub) => (
+        <li>
+          {pub.url ? (
+            <a class="entry__title" href={pub.url}>
+              {pub.title}
+            </a>
+          ) : (
+            <span class="entry__title">{pub.title}</span>
+          )}
+          <div class="entry__meta">
+            <em>{describe(pub)}</em>
+            {pub.year && <> &middot; {pub.year}</>}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>All publications</h2>
+
   {
     years.map(([year, pubs]) => (
       <section>
-        <h2 class="year">{year || "Undated"}</h2>
+        {/* h3, not h2: these sit under "All publications" rather than beside
+            it. The .year class carries the look either way. */}
+        <h3 class="year">{year || "Undated"}</h3>
         <ul class="entries">
           {pubs.map((pub) => (
             <li>
@@ -30,7 +62,7 @@ const years = byYear(getPublications());
                 <span class="entry__title">{pub.title}</span>
               )}
               <div class="entry__meta">
-                <em>{pub.journal ?? pub.type}</em>
+                <em>{describe(pub)}</em>
                 {pub.doi && <> &middot; {pub.doi}</>}
               </div>
             </li>
