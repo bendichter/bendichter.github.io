@@ -44,7 +44,11 @@ export type Project = {
   /** Language or platform, shown as a chip. */
   lang: string;
   stars?: number;
-  /** Short factual notes rendered under the blurb, e.g. "42 moves". */
+  /**
+   * Short factual notes rendered under the blurb, e.g. "44 moves". Counted by
+   * hand from the live site, so they go stale quietly: check them against the
+   * source when you touch this file.
+   */
   facts?: string[];
   blurb: string;
 };
@@ -61,7 +65,7 @@ export const projects: Project[] = [
     href: "https://westie.wiki",
     kind: "app",
     lang: "Web app",
-    facts: ["42 moves", "127 video clips", "57 dancers"],
+    facts: ["44 moves", "144 video clips", "58 dancers"],
     blurb:
       "A community wiki for West Coast Swing moves, edited Wikipedia-style. Every move gets aliases, variants, and related patterns, and any YouTube dance can be marked up move by move so the timeline follows along with the video. Descriptive rather than prescriptive: it records how the community actually dances.",
   },
