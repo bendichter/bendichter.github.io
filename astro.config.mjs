@@ -22,6 +22,10 @@ export default defineConfig({
     // the old WordPress-era blog index
     "/wordpress/blog-posts": "/posts",
     "/year-archive": "/posts",
+    // The Jekyll site's CV page, which embedded a PDF that is no longer
+    // published. The publication list is the part of it people came for.
+    "/cv": "/publications",
+    "/resume": "/publications",
   },
 
   // Directory-style URLs, so /posts/foo and /posts/foo/ both resolve, which is
