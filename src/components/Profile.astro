@@ -20,9 +20,13 @@ import Icon from "./Icon.astro";
     {
       socials.map((s) => (
         <li>
-          <a href={s.href} rel={s.href.startsWith("http") ? "me" : undefined}>
+          <a
+            href={s.href}
+            rel={s.href.startsWith("http") ? "me" : undefined}
+            aria-label={s.title}
+          >
             <Icon name={s.icon} />
-            {s.title}
+            <span>{s.title}</span>
           </a>
         </li>
       ))
