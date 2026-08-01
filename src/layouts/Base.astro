@@ -38,6 +38,15 @@ const canonical = new URL(Astro.url.pathname, site.url);
 // A page's own card when it has one, the profile photo otherwise.
 const ogImageUrl = new URL(ogImage ?? site.avatar, site.url);
 const path = Astro.url.pathname;
+
+/**
+ * "page" only on the page itself. Inside a post, the Blog link points at an
+ * ancestor of where the reader is rather than at the page they are on, and
+ * aria-current="true" is what says "this is the current item in this set"
+ * without claiming to be the page.
+ */
+const current = (href: string) =>
+  path === href ? "page" : path.startsWith(href) ? "true" : undefined;
 ---
 
 <!doctype html>
@@ -91,10 +100,7 @@ const path = Astro.url.pathname;
         <nav aria-label="Main">
           {
             nav.map((item) => (
-              <a
-                href={item.href}
-                aria-current={path.startsWith(item.href) ? "page" : undefined}
-              >
+              <a href={item.href} aria-current={current(item.href)}>
                 {item.title}
               </a>
             ))

@@ -44,8 +44,11 @@ const groups = [
                   <a href={project.href}>{project.name}</a>
                 </h3>
                 {project.stars && (
-                  <span class="card__stars" title={`${project.stars} stars on GitHub`}>
-                    ★ {project.stars}
+                  <span class="card__stars">
+                    <span aria-hidden="true">★ {project.stars}</span>
+                    <span class="visually-hidden">
+                      {project.stars} stars on GitHub
+                    </span>
                   </span>
                 )}
               </div>

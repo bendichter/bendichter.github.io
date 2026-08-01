@@ -58,8 +58,9 @@ const recent = (await getPosts()).slice(0, 3);
             <a href={s.href}>{s.name}</a>
             <span class="software__tag">{s.lang}</span>
             {s.stars && (
-              <span class="software__stars" title={`${s.stars} stars on GitHub`}>
-                ★ {s.stars}
+              <span class="software__stars">
+                <span aria-hidden="true">★ {s.stars}</span>
+                <span class="visually-hidden">{s.stars} stars on GitHub</span>
               </span>
             )}
           </div>
