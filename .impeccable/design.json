@@ -9,7 +9,16 @@
         "displayName": "Scholar Blue",
         "canonical": "#3355cc",
         "darkValue": "#7d9dfa",
-        "tonalRamp": ["#0c1433", "#16255c", "#203785", "#2a48ad", "#3355cc", "#6e86dd", "#a3b3ea", "#d9e0f7"]
+        "tonalRamp": [
+          "#0c1433",
+          "#16255c",
+          "#203785",
+          "#2a48ad",
+          "#3355cc",
+          "#6e86dd",
+          "#a3b3ea",
+          "#d9e0f7"
+        ]
       },
       "scholar-blue-soft": {
         "role": "primary",
@@ -22,57 +31,179 @@
         "displayName": "Spectrum 1 (Blue)",
         "canonical": "#3355cc",
         "darkValue": "#7d9dfa",
-        "tonalRamp": ["#0c1433", "#16255c", "#203785", "#2a48ad", "#3355cc", "#6e86dd", "#a3b3ea", "#d9e0f7"]
+        "tonalRamp": [
+          "#0c1433",
+          "#16255c",
+          "#203785",
+          "#2a48ad",
+          "#3355cc",
+          "#6e86dd",
+          "#a3b3ea",
+          "#d9e0f7"
+        ]
       },
       "spectrum-2": {
         "role": "secondary",
         "displayName": "Spectrum 2 (Cerulean)",
         "canonical": "#1a68a6",
         "darkValue": "#57aae8",
-        "tonalRamp": ["#081f33", "#0f3a5c", "#155586", "#175f96", "#1a68a6", "#5497cc", "#93bde0", "#d2e3f2"]
+        "tonalRamp": [
+          "#081f33",
+          "#0f3a5c",
+          "#155586",
+          "#175f96",
+          "#1a68a6",
+          "#5497cc",
+          "#93bde0",
+          "#d2e3f2"
+        ]
       },
       "spectrum-3": {
         "role": "secondary",
         "displayName": "Spectrum 3 (Teal)",
         "canonical": "#0b7077",
         "darkValue": "#35bcc0",
-        "tonalRamp": ["#032527", "#064a4e", "#096d73", "#0b7077", "#33a1a8", "#66b9be", "#9dd2d5", "#d6edee"]
+        "tonalRamp": [
+          "#032527",
+          "#064a4e",
+          "#096d73",
+          "#0b7077",
+          "#33a1a8",
+          "#66b9be",
+          "#9dd2d5",
+          "#d6edee"
+        ]
       },
       "spectrum-4": {
         "role": "secondary",
         "displayName": "Spectrum 4 (Green)",
         "canonical": "#307336",
         "darkValue": "#63bd68",
-        "tonalRamp": ["#0e2210", "#1c4520", "#2a6730", "#307336", "#5c9f62", "#84ba89", "#b0d5b3", "#dfefe0"]
+        "tonalRamp": [
+          "#0e2210",
+          "#1c4520",
+          "#2a6730",
+          "#307336",
+          "#5c9f62",
+          "#84ba89",
+          "#b0d5b3",
+          "#dfefe0"
+        ]
       },
       "spectrum-5": {
         "role": "secondary",
         "displayName": "Spectrum 5 (Amber)",
         "canonical": "#8a5c14",
         "darkValue": "#dcae5c",
-        "tonalRamp": ["#2e1f07", "#5c3e0d", "#734d11", "#8a5c14", "#c4924a", "#d5ac79", "#e5c8a9", "#f4e4d3"]
+        "tonalRamp": [
+          "#2e1f07",
+          "#5c3e0d",
+          "#734d11",
+          "#8a5c14",
+          "#c4924a",
+          "#d5ac79",
+          "#e5c8a9",
+          "#f4e4d3"
+        ]
       },
       "spectrum-6": {
         "role": "secondary",
         "displayName": "Spectrum 6 (Red-Orange)",
         "canonical": "#ab442c",
         "darkValue": "#e8836a",
-        "tonalRamp": ["#2f120c", "#5e2418", "#8c3723", "#ab442c", "#c96e58", "#da9382", "#e9b9ae", "#f6ded8"]
+        "tonalRamp": [
+          "#2f120c",
+          "#5e2418",
+          "#8c3723",
+          "#ab442c",
+          "#c96e58",
+          "#da9382",
+          "#e9b9ae",
+          "#f6ded8"
+        ]
       },
-      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#16181d", "darkValue": "#e9ebef" },
-      "muted": { "role": "neutral", "displayName": "Muted", "canonical": "#565e70", "darkValue": "#a7aebc" },
-      "faint": { "role": "neutral", "displayName": "Faint", "canonical": "#69707c", "darkValue": "#7d8593" },
-      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#e3e6ee", "darkValue": "#2b3039" },
-      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#fcfcfd", "darkValue": "#111318" },
-      "panel": { "role": "neutral", "displayName": "Panel", "canonical": "#f3f5f9", "darkValue": "#191c23" }
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#16181d",
+        "darkValue": "#e9ebef"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#565e70",
+        "darkValue": "#a7aebc"
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Faint",
+        "canonical": "#69707c",
+        "darkValue": "#7d8593"
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#e3e6ee",
+        "darkValue": "#2b3039"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#fcfcfd",
+        "darkValue": "#111318"
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "canonical": "#f3f5f9",
+        "darkValue": "#191c23"
+      }
     },
     "typographyMeta": {
-      "headline": { "displayName": "Headline", "purpose": "Page titles. Serif, balanced wrapping." },
-      "title": { "displayName": "Title", "purpose": "Section headings (h2), 3rem top margin bands sections." },
-      "subtitle": { "displayName": "Subtitle", "purpose": "Sub-sections (h3)." },
-      "lede": { "displayName": "Lede", "purpose": "Homepage opening paragraph, set in Muted." },
-      "body": { "displayName": "Body", "purpose": "Running text; 42rem prose measure inside articles." },
-      "label": { "displayName": "Label", "purpose": "Uppercase year headings in archives, paired with a spectrum dot." }
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles. Serif, balanced wrapping."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings (h2), 3rem top margin bands sections."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "A page's opening paragraph, set in Muted."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Sub-sections (h3)."
+      },
+      "brand": {
+        "displayName": "Brand",
+        "purpose": "The site name in the masthead."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text; 42rem prose measure inside articles."
+      },
+      "name": {
+        "displayName": "Name",
+        "purpose": "Card titles and the profile name, a shade under body size."
+      },
+      "compact": {
+        "displayName": "Compact",
+        "purpose": "Blurbs, nav links, code blocks, the profile column."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Metadata lines, dates, venues, footer text."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Chips, star counts, smallest supporting detail."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase year headings in archives, paired with a spectrum dot."
+      }
     },
     "shadows": [
       {
@@ -82,11 +213,22 @@
       }
     ],
     "motion": [
-      { "name": "color-shift", "value": "0.12s ease to 0.14s ease", "purpose": "Link underline color, card border, wash deepening." },
-      { "name": "transform", "value": "0.2s ease to 0.25s ease", "purpose": "Thumbnail zooms (scale 1.035 to 1.05), play badge recolor, card lift. Disabled under prefers-reduced-motion." }
+      {
+        "name": "color-shift",
+        "value": "0.12s ease to 0.14s ease",
+        "purpose": "Link underline color, card border, wash deepening."
+      },
+      {
+        "name": "transform",
+        "value": "0.2s ease to 0.25s ease",
+        "purpose": "Thumbnail zooms (scale 1.035 to 1.05), play badge recolor, card lift. Disabled under prefers-reduced-motion."
+      }
     ],
     "breakpoints": [
-      { "name": "content", "value": "48rem" }
+      {
+        "name": "content",
+        "value": "48rem"
+      }
     ]
   },
   "components": [
@@ -96,7 +238,7 @@
       "refersTo": "card",
       "description": "Flat card with a 3px spectrum top border; hovering warms the border, lifts the card 2px, and reveals a step-tinted shadow.",
       "html": "<article class=\"ds-card\"><div class=\"ds-card__head\"><h3 class=\"ds-card__name\"><a href=\"#\">brokenaxes</a></h3><span class=\"ds-card__stars\">★ 573</span></div><span class=\"ds-card__lang\">Python</span><p class=\"ds-card__blurb\">A matplotlib package for plots with a broken axis, for when one outlier would otherwise flatten everything else on the chart.</p><div class=\"ds-card__links\"><a href=\"#\">Source</a></div></article>",
-      "css": ".ds-card { --step: #0b7077; position: relative; display: flex; flex-direction: column; max-width: 20rem; padding: 1.15rem 1.25rem 1.1rem; border: 1px solid #e3e6ee; border-top: 3px solid var(--step); border-radius: 4px 4px 10px 10px; background: #fcfcfd; color: #16181d; font-family: ui-sans-serif, -apple-system, sans-serif; transition: border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease; } .ds-card:hover { border-color: color-mix(in srgb, var(--step) 45%, #e3e6ee); box-shadow: 0 6px 20px -12px color-mix(in srgb, var(--step) 70%, transparent); transform: translateY(-2px); } .ds-card__head { display: flex; align-items: baseline; gap: 0.6rem; } .ds-card__name { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.005em; margin: 0; } .ds-card__name a { color: #16181d; text-decoration: none; } .ds-card:hover .ds-card__name a { color: var(--step); } .ds-card__stars { font-size: 0.76rem; color: #69707c; margin-left: auto; white-space: nowrap; } .ds-card__lang { align-self: flex-start; margin-top: 0.5rem; font-size: 0.71rem; font-weight: 550; letter-spacing: 0.04em; text-transform: uppercase; color: var(--step); background: color-mix(in srgb, var(--step) 11%, transparent); border-radius: 999px; padding: 0.13rem 0.55rem; } .ds-card__blurb { margin: 0.75rem 0 0; color: #565e70; font-size: 0.92rem; line-height: 1.55; } .ds-card__links { display: flex; gap: 1rem; margin-top: auto; padding-top: 1rem; font-size: 0.85rem; } .ds-card__links a { color: var(--step); text-decoration: none; font-weight: 500; } .ds-card__links a:hover { text-decoration: underline; text-underline-offset: 3px; }"
+      "css": ".ds-card { --step: #0b7077; position: relative; display: flex; flex-direction: column; max-width: 20rem; padding: 1.15rem 1.25rem 1.1rem; border: 1px solid #e3e6ee; border-top: 3px solid var(--step); border-radius: 4px 4px 10px 10px; background: #fcfcfd; color: #16181d; font-family: ui-sans-serif, -apple-system, sans-serif; transition: border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease; } .ds-card:hover { border-color: color-mix(in srgb, var(--step) 45%, #e3e6ee); box-shadow: 0 6px 20px -12px color-mix(in srgb, var(--step) 70%, transparent); transform: translateY(-2px); } .ds-card__head { display: flex; align-items: baseline; gap: 0.6rem; } .ds-card__name { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.005em; margin: 0; } .ds-card__name a { color: #16181d; text-decoration: none; } .ds-card:hover .ds-card__name a { color: var(--step); } .ds-card__stars { font-size: 0.79rem; color: #69707c; margin-left: auto; white-space: nowrap; } .ds-card__lang { align-self: flex-start; margin-top: 0.5rem; font-size: 0.72rem; font-weight: 550; letter-spacing: 0.04em; text-transform: uppercase; color: var(--step); background: color-mix(in srgb, var(--step) 11%, transparent); border-radius: 999px; padding: 0.13rem 0.55rem; } .ds-card__blurb { margin: 0.75rem 0 0; color: #565e70; font-size: 0.92rem; line-height: 1.55; } .ds-card__links { display: flex; gap: 1rem; margin-top: auto; padding-top: 1rem; font-size: 0.86rem; } .ds-card__links a { color: var(--step); text-decoration: none; font-weight: 500; } .ds-card__links a:hover { text-decoration: underline; text-underline-offset: 3px; }"
     },
     {
       "name": "Tag Chip",
@@ -112,7 +254,7 @@
       "refersTo": "chip-tag",
       "description": "Uppercase language/platform chip tinted by its row's spectrum step.",
       "html": "<span class=\"ds-chip-lang\">Web app</span>",
-      "css": ".ds-chip-lang { --step: #307336; display: inline-block; font-family: ui-sans-serif, -apple-system, sans-serif; font-size: 0.71rem; font-weight: 550; letter-spacing: 0.04em; text-transform: uppercase; color: var(--step); background: color-mix(in srgb, var(--step) 11%, transparent); border-radius: 999px; padding: 0.13rem 0.55rem; }"
+      "css": ".ds-chip-lang { --step: #307336; display: inline-block; font-family: ui-sans-serif, -apple-system, sans-serif; font-size: 0.72rem; font-weight: 550; letter-spacing: 0.04em; text-transform: uppercase; color: var(--step); background: color-mix(in srgb, var(--step) 11%, transparent); border-radius: 999px; padding: 0.13rem 0.55rem; }"
     },
     {
       "name": "Masthead",
@@ -136,7 +278,7 @@
       "refersTo": "card",
       "description": "Homepage project row: 3px spectrum left border with a dilute wash that deepens on hover.",
       "html": "<div class=\"ds-software-row\"><div class=\"ds-software-row__head\"><a href=\"#\">westie.wiki</a><span class=\"ds-software-row__tag\">Web app</span><span class=\"ds-software-row__stars\">★ 42</span></div><p>A community wiki for West Coast Swing moves, edited Wikipedia-style.</p></div>",
-      "css": ".ds-software-row { --step: #3355cc; font-family: ui-sans-serif, -apple-system, sans-serif; max-width: 26rem; padding: 0.7rem 0.95rem; border-radius: 0 9px 9px 0; border-left: 3px solid var(--step); background: linear-gradient(90deg, color-mix(in srgb, var(--step) 7%, transparent), transparent 65%); transition: background 0.14s ease; } .ds-software-row:hover { background: linear-gradient(90deg, color-mix(in srgb, var(--step) 16%, transparent), transparent 80%); } .ds-software-row__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.55rem; } .ds-software-row__head a { font-weight: 550; text-decoration: none; color: var(--step); } .ds-software-row__head a:hover { text-decoration: underline; text-underline-offset: 2.5px; } .ds-software-row__tag { font-size: 0.72rem; font-weight: 550; letter-spacing: 0.03em; color: var(--step); background: color-mix(in srgb, var(--step) 12%, transparent); border-radius: 999px; padding: 0.08rem 0.5rem; } .ds-software-row__stars { font-size: 0.76rem; color: #69707c; margin-left: auto; white-space: nowrap; } .ds-software-row p { margin: 0.2rem 0 0; color: #565e70; font-size: 0.92rem; line-height: 1.55; }"
+      "css": ".ds-software-row { --step: #3355cc; font-family: ui-sans-serif, -apple-system, sans-serif; max-width: 26rem; padding: 0.7rem 0.95rem; border-radius: 0 9px 9px 0; border-left: 3px solid var(--step); background: linear-gradient(90deg, color-mix(in srgb, var(--step) 7%, transparent), transparent 65%); transition: background 0.14s ease; } .ds-software-row:hover { background: linear-gradient(90deg, color-mix(in srgb, var(--step) 16%, transparent), transparent 80%); } .ds-software-row__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.55rem; } .ds-software-row__head a { font-weight: 550; text-decoration: none; color: var(--step); } .ds-software-row__head a:hover { text-decoration: underline; text-underline-offset: 2.5px; } .ds-software-row__tag { font-size: 0.72rem; font-weight: 550; letter-spacing: 0.03em; color: var(--step); background: color-mix(in srgb, var(--step) 12%, transparent); border-radius: 999px; padding: 0.08rem 0.5rem; } .ds-software-row__stars { font-size: 0.79rem; color: #69707c; margin-left: auto; white-space: nowrap; } .ds-software-row p { margin: 0.2rem 0 0; color: #565e70; font-size: 0.92rem; line-height: 1.55; }"
     },
     {
       "name": "Talk Thumbnail",
@@ -144,7 +286,7 @@
       "refersTo": "card",
       "description": "16:9 media tile with a CSS-drawn play badge that turns Scholar Blue on hover.",
       "html": "<a class=\"ds-talk\" href=\"#\"><span class=\"ds-talk__thumb\"><span class=\"ds-talk__play\"></span></span><span class=\"ds-talk__title\">Neurodata Without Borders: extensions and simulation</span><span class=\"ds-talk__meta\">Aug 2018 · <em>Breckenridge, CO</em></span></a>",
-      "css": ".ds-talk { display: block; max-width: 18rem; text-decoration: none; color: inherit; font-family: ui-sans-serif, -apple-system, sans-serif; } .ds-talk__thumb { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 9px; border: 1px solid #e3e6ee; background: #f3f5f9; } .ds-talk__play { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 2.9rem; height: 2.9rem; border-radius: 50%; background: rgb(0 0 0 / 0.55); transition: background 0.2s ease; } .ds-talk__play::after { content: ''; position: absolute; left: 54%; top: 50%; translate: -50% -50%; border-style: solid; border-width: 0.42rem 0 0.42rem 0.7rem; border-color: transparent transparent transparent #fff; } .ds-talk:hover .ds-talk__play { background: #3355cc; } .ds-talk__title { display: block; margin-top: 0.7rem; font-weight: 550; line-height: 1.4; color: #16181d; } .ds-talk:hover .ds-talk__title { color: #3355cc; } .ds-talk__meta { display: block; color: #69707c; font-size: 0.83rem; margin-top: 0.25rem; } .ds-talk__meta em { font-style: normal; color: #565e70; }"
+      "css": ".ds-talk { display: block; max-width: 18rem; text-decoration: none; color: inherit; font-family: ui-sans-serif, -apple-system, sans-serif; } .ds-talk__thumb { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 9px; border: 1px solid #e3e6ee; background: #f3f5f9; } .ds-talk__play { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 2.9rem; height: 2.9rem; border-radius: 50%; background: rgb(0 0 0 / 0.55); transition: background 0.2s ease; } .ds-talk__play::after { content: ''; position: absolute; left: 54%; top: 50%; translate: -50% -50%; border-style: solid; border-width: 0.42rem 0 0.42rem 0.7rem; border-color: transparent transparent transparent #fff; } .ds-talk:hover .ds-talk__play { background: #3355cc; } .ds-talk__title { display: block; margin-top: 0.7rem; font-weight: 550; line-height: 1.4; color: #16181d; } .ds-talk:hover .ds-talk__title { color: #3355cc; } .ds-talk__meta { display: block; color: #69707c; font-size: 0.86rem; margin-top: 0.25rem; } .ds-talk__meta em { font-style: normal; color: #565e70; }"
     },
     {
       "name": "Entry Row",
@@ -167,13 +309,46 @@
       "Automatic light and dark schemes via prefers-color-scheme, with color-scheme declared"
     ],
     "rules": [
-      { "name": "The One Full-Strength Statement Rule", "body": "The Spectrum appears saturated and adjacent only in the masthead hairline. Everywhere else a step appears alone and diluted: color-mix() washes of 7-16%, small dots, thin borders, chip tints. Never use a full-strength spectrum step as a large fill.", "section": "colors" },
-      { "name": "The Spectrum Order Rule", "body": "The ramp runs blue, blue, teal, green, amber, red-orange specifically so adjacent steps stay distinguishable under red-green color vision deficiency. Never reorder, skip, or substitute steps, and always assign them by position (6n + k), not by meaning.", "section": "colors" },
-      { "name": "The Two Schemes Rule", "body": "Every color introduced must be defined for both light and dark schemes in :root and the prefers-color-scheme: dark block. Dark variants are lifted in lightness and dropped in saturation, never simple inversions.", "section": "colors" },
-      { "name": "The Intermediate Weight Rule", "body": "Emphasis inside body-size text uses in-between weights the variable system fonts support: 550 for entry titles, nav's active link, and chip text; 650 for labels. Full bold (700) is reserved for markdown strong text.", "section": "typography" },
-      { "name": "The Serif Marks Identity Rule", "body": "The serif appears where the site speaks as itself: page headlines, section headings, the masthead name, the profile name. UI text, metadata, and body copy stay sans.", "section": "typography" },
-      { "name": "The One Measure Rule", "body": "Every page shares the 58rem measure. New layouts must compose inside it (or sum to it, as the homepage grid does), never widen past it.", "section": "layout" },
-      { "name": "The Flat-At-Rest Rule", "body": "Surfaces are flat at rest; shadow and lift appear only as a response to hover, and always tinted, never neutral gray.", "section": "elevation" }
+      {
+        "name": "The One Full-Strength Statement Rule",
+        "body": "The Spectrum appears saturated and adjacent only in the masthead hairline. Everywhere else a step appears alone and diluted: color-mix() washes of 7-16%, small dots, thin borders, chip tints. Never use a full-strength spectrum step as a large fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Spectrum Order Rule",
+        "body": "The ramp runs blue, blue, teal, green, amber, red-orange specifically so adjacent steps stay distinguishable under red-green color vision deficiency. Never reorder, skip, or substitute steps, and always assign them by position (6n + k), not by meaning.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Schemes Rule",
+        "body": "Every color introduced must be defined for both light and dark schemes in :root and the prefers-color-scheme: dark block. Dark variants are lifted in lightness and dropped in saturation, never simple inversions.",
+        "section": "colors"
+      },
+      {
+        "name": "The Intermediate Weight Rule",
+        "body": "Emphasis inside body-size text uses in-between weights the variable system fonts support: 550 for entry titles, nav's active link, and chip text; 650 for labels. Full bold (700) is reserved for markdown strong text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serif Marks Identity Rule",
+        "body": "The serif appears where the site speaks as itself: page headlines, section headings, the masthead name, the profile name. UI text, metadata, and body copy stay sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Measure Rule",
+        "body": "Every page shares the 58rem measure. New layouts must compose inside it (or sum to it, as the homepage grid does), never widen past it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "Surfaces are flat at rest; shadow and lift appear only as a response to hover, and always tinted, never neutral gray.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Ten Steps Rule",
+        "body": "Every size in the interface is one of the ten documented steps. A new size must replace a step, not sit between two of them: if the difference from the nearest step is under 0.05rem, no reader can see it and the step already exists.",
+        "section": "typography"
+      }
     ],
     "dos": [
       "Do assign spectrum steps positionally with nth-child(6n + k) cycles, and dilute them with color-mix(in srgb, var(--step) 7-16%, transparent) for fills.",

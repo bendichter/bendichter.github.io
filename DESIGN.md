@@ -35,6 +35,12 @@ typography:
     fontWeight: 600
     lineHeight: 1.22
     letterSpacing: "-0.012em"
+  brand:
+    fontFamily: "ui-serif, Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif"
+    fontSize: "1.1rem"
+    fontWeight: 600
+    lineHeight: 1.22
+    letterSpacing: "-0.01em"
   lede:
     fontFamily: "ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif"
     fontSize: "1.2rem"
@@ -45,6 +51,27 @@ typography:
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.68
+  name:
+    fontFamily: "ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif"
+    fontSize: "1.02rem"
+    fontWeight: 600
+    lineHeight: 1.4
+    letterSpacing: "-0.005em"
+  compact:
+    fontFamily: "ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif"
+    fontSize: "0.92rem"
+    fontWeight: 400
+    lineHeight: 1.55
+  small:
+    fontFamily: "ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif"
+    fontSize: "0.86rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  micro:
+    fontFamily: "ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif"
+    fontSize: "0.79rem"
+    fontWeight: 400
+    lineHeight: 1.45
   label:
     fontFamily: "ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif"
     fontSize: "0.72rem"
@@ -135,18 +162,26 @@ The Spectrum, a six-step ramp that gives repeating sections (years in an archive
 
 **Character:** A bookish serif for headings and the author's name over a plain, highly legible system sans for everything else: the voice of a well-set academic page that loads instantly. No webfonts are shipped; Inter exists in the repo only to render build-time social card images.
 
-### Hierarchy
+Ten steps, and no more. Below body size the ramp is deliberately coarse: a UI this small once carried eleven separate sizes between 0.71rem and 0.94rem, differences of a fraction of a pixel that no reader could see and no rule could justify.
+
 - **Headline** (600, clamp(1.85rem, 1.4rem + 1.6vw, 2.4rem), 1.22): page titles. Serif, tight -0.012em tracking, `text-wrap: balance`.
 - **Title** (600, 1.4rem, 1.22): section headings (h2), serif, 3rem top margin to band sections.
+- **Lede** (400, 1.2rem, 1.55): a page's opening paragraph, set in Muted.
 - **Subtitle** (600, 1.15rem, 1.22): sub-sections (h3), serif.
-- **Lede** (400, 1.2rem, 1.55): the homepage's opening paragraph, set in Muted to give the page an editorial opening.
+- **Brand** (600, 1.1rem, serif): the site name in the masthead.
 - **Body** (400, 1.0625rem, 1.68): running text, `text-wrap: pretty`. Inside articles it is held to the 42rem prose measure (roughly 70 characters).
+- **Name** (600, 1.02rem): the title of a card or the profile name, a shade under body size.
+- **Compact** (400, 0.92rem): blurbs, nav links, code blocks, the profile column.
+- **Small** (400, 0.86rem): metadata lines, dates, venues, footer text.
+- **Micro** (400, 0.79rem): chips, star counts, and the smallest supporting detail.
 - **Label** (650, 0.72rem, 0.11em tracking, UPPERCASE): year headings in archives, paired with a spectrum dot.
 
 ### Named Rules
 **The Intermediate Weight Rule.** Emphasis inside body-size text uses in-between weights the variable system fonts support: 550 for entry titles, nav's active link, and chip text; 650 for labels. Full bold (700) is reserved for markdown strong text.
 
 **The Serif Marks Identity Rule.** The serif appears where the site speaks as itself: page headlines, section headings, the masthead name, the profile name. UI text, metadata, and body copy stay sans.
+
+**The Ten Steps Rule.** Every size in the interface is one of the ten steps above. A new size must replace a step, not sit between two of them: if the difference from the nearest step is under 0.05rem, no reader can see it and the step already exists.
 
 ## Layout
 
