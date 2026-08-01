@@ -94,9 +94,24 @@ function buildIco(pngs) {
   return Buffer.concat([header, ...entries, ...pngs.map((p) => p.data)]);
 }
 
+/**
+ * The avatar shown in the sidebar, at twice its rendered size so it stays sharp
+ * on a retina screen. It is generated here rather than imported through Astro's
+ * pipeline because profile.jpeg also has to stay a stable public URL: it is the
+ * source for every icon above and the fallback og:image. Emitting a WebP beside
+ * it keeps one source of truth and still saves the page half the bytes.
+ */
+const AVATAR = 240;
+
 const main = async () => {
   await mkdir(IMAGES, { recursive: true });
   const base = await square(SRC);
+
+  await writeFile(
+    new URL(`profile-${AVATAR}.webp`, IMAGES),
+    await sharp(base).resize(AVATAR, AVATAR, { fit: "cover" }).webp({ quality: 82 }).toBuffer(),
+  );
+  console.log(`  profile-${AVATAR}.webp          sidebar avatar`);
 
   for (const n of FAVICON) {
     await writeFile(new URL(`favicon-${n}x${n}.png`, IMAGES), await circlePng(base, n));
