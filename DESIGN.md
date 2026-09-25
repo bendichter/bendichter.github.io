@@ -185,11 +185,11 @@ Ten steps, and no more. Below body size the ramp is deliberately coarse: a UI th
 
 ## Layout
 
-One content width for every page: `--measure` (58rem), centered inside a 62rem shell with 1.35rem side padding. The homepage is a two-track grid (14rem profile column + 40.5rem main + 3.5rem gap) whose tracks deliberately sum to the same 58rem, so moving between homepage and inner pages produces no width shift. Pages without the profile column use a single centered track.
+One content width for every page: `--measure` (58rem), centered inside a shell that is exactly the measure plus its 1.35rem gutters, so the masthead name, the page content, and the footer share one left edge. The homepage is a two-track grid (14rem profile column + 40.5rem main + 3.5rem gap) whose tracks deliberately sum to the same 58rem, so moving between homepage and inner pages produces no width shift. Pages without the profile column use a single centered track.
 
 Inside articles, running prose narrows further to `--prose` (42rem), while images and code may break out to the full measure. Vertical rhythm comes from generous section spacing (3rem above h2, 2.75rem above year labels) and hairline rules rather than boxes.
 
-Grids are content-driven: `repeat(auto-fill, minmax(17rem, 1fr))` for project cards, 16rem minimum for talk thumbnails, 9.5rem for the drone reel. The single breakpoint is 48rem, below which the profile column reflows into a horizontal header band and grids collapse naturally.
+Grids are content-driven: `repeat(auto-fill, minmax(17rem, 1fr))` for project cards, 16rem minimum for talk thumbnails, 9.5rem for the drone reel. The main breakpoint is 48rem, below which the profile column reflows into a horizontal header band and grids collapse naturally. Below 36rem the masthead links wrap under the site name and align left with it.
 
 The masthead is sticky, translucent (`color-mix` at 85% over the page), and backdrop-blurred, with the spectrum hairline as its top edge.
 

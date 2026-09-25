@@ -199,9 +199,14 @@ hr {
 /* ---- shell ---------------------------------------------------------- */
 
 .shell {
-  max-width: 62rem;
+  --gutter: 1.35rem;
+  /* The measure plus the gutters, so the masthead name, the footer, and the
+     first line of every page all share one left edge. At 62rem the shell was
+     1.3rem wider than the content inside it, which left the masthead and footer
+     sitting about 10px out from everything between them. */
+  max-width: calc(var(--measure) + 2 * var(--gutter));
   margin: 0 auto;
-  padding: 0 1.35rem;
+  padding: 0 var(--gutter);
 }
 
 .masthead {
@@ -279,6 +284,15 @@ hr {
   background: var(--accent);
 }
 
+/* On a phone the links do not fit beside the name and wrap to a second row.
+   Pushed right there, they hung off the far edge with nothing above them; left
+   aligned, they line up under the name and with the page below. */
+@media (max-width: 36rem) {
+  .masthead nav {
+    margin-left: 0;
+  }
+}
+
 /* The homepage's two tracks plus the gap add up to --measure, so it spans
    exactly the same width as every single-column page rather than a shade
    wider, which is the sort of difference you feel without being able to name. */
@@ -330,6 +344,25 @@ main > :first-child {
   display: contents;
 }
 
+/* Browsers give <source> no display: none of their own, so once its <picture>
+   stops generating a box it becomes a grid item in its own right and takes the
+   first cell, pushing the avatar into the second column on phones. It only
+   ever carries attributes, so hiding it changes nothing about which file
+   loads. */
+.profile source {
+  display: none;
+}
+
+/* Declared ahead of the mobile block below, which overrides its size. */
+.profile__avatar {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 1px solid var(--rule);
+}
+
 @media (min-width: 48.01rem) {
   .profile {
     position: sticky;
@@ -348,10 +381,14 @@ main > :first-child {
     border-bottom: 1px solid var(--rule);
   }
 
+  /* max-width: none matters here. The global max-width: 100% resolves against
+     the auto track the image is itself sizing, which collapsed the avatar to a
+     1px sliver on phones. */
   .profile__avatar {
     grid-row: span 2;
     width: 5rem;
     height: 5rem;
+    max-width: none;
     margin: 0;
   }
 
@@ -360,7 +397,9 @@ main > :first-child {
     grid-auto-flow: column;
     justify-content: start;
     gap: 1rem;
-    margin-top: 1rem;
+    /* The links' -0.4rem tap-target margin comes out of this, so the visible
+       gap under the avatar is about 1.1rem. */
+    margin-top: 1.5rem;
   }
 
   /* Icon-only below the breakpoint: the aria-label on each link carries the
@@ -378,15 +417,6 @@ main > :first-child {
     width: 1.25rem;
     height: 1.25rem;
   }
-}
-
-.profile__avatar {
-  width: 7.5rem;
-  height: 7.5rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 1px solid var(--rule);
 }
 
 .profile__name {
