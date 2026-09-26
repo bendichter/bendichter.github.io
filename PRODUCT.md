@@ -42,7 +42,7 @@ This site is Ben the individual, not the company. Company-level marketing lives 
 
 ## Evidence on Hand
 
-- Real publications 2014 to 2025 in `src/data/publications.json`, refreshed by script.
+- Real publications 2014 to 2025 in `src/data/publications.json`, refreshed by script, with author lists in `src/data/publication-authors.json`.
 - Real talks with YouTube recordings and thumbnails (`src/content/talks/`, `src/assets/talks/`).
 - Ten blog posts 2018 to 2026 (`src/content/posts/`), including matplotlib tooling posts and project announcements.
 - Working side projects with live URLs: westie.wiki, Invisible String, ReachMyReps, brokenaxes (573 GitHub stars, hand-recorded), and others in `src/data/site.ts`.

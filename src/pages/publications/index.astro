@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import Authors from "../../components/Authors.astro";
 import {
   getPublications,
   byYear,
@@ -34,6 +35,7 @@ const years = byYear(all);
           ) : (
             <span class="entry__title">{pub.title}</span>
           )}
+          <Authors pub={pub} />
           <div class="entry__meta">
             <em>{describe(pub)}</em>
             {pub.year && <> &middot; {pub.year}</>}
@@ -61,6 +63,7 @@ const years = byYear(all);
               ) : (
                 <span class="entry__title">{pub.title}</span>
               )}
+              <Authors pub={pub} />
               <div class="entry__meta">
                 <em>{describe(pub)}</em>
                 {pub.doi && <> &middot; {pub.doi}</>}
