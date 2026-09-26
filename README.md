@@ -13,7 +13,22 @@ npm run preview    # serve ./dist
 ```
 
 Deployment is a GitHub Actions workflow (`.github/workflows/deploy.yml`) that
-runs `npm ci && npm run build` and publishes `dist` to GitHub Pages.
+runs `npm ci && npm run build` and pushes `dist` to the `gh-pages` branch,
+which GitHub Pages serves.
+
+## PR previews
+
+Every pull request from a branch in this repo gets a preview of the site at
+`https://bendichter.com/pr-preview/pr-<number>/`, linked from a comment on the
+PR (`.github/workflows/preview.yml`). It is rebuilt on every push and removed
+when the PR closes. Previews live on `gh-pages` beside the live site, and the
+production deploy leaves `pr-preview/` alone.
+
+A preview is the production build with its root-relative links rewritten to
+the preview's path by `scripts/rebase-preview.mjs`, which fails if any link
+would still lead out of the preview to the live site. `robots.txt` keeps
+`/pr-preview/` out of search, and every preview page's canonical URL is the
+live one.
 
 ## Where things live
 

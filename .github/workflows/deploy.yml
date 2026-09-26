@@ -5,18 +5,20 @@ on:
     branches: [master]
   workflow_dispatch:
 
+# The build is pushed to the gh-pages branch, which Pages serves, rather than
+# uploaded as a Pages artifact. PR previews (preview.yml) live on that same
+# branch under pr-preview/, and an artifact deploy replaces the whole site,
+# which would delete every open preview on each production deploy.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # Let a running deploy finish rather than cancelling it mid-publish.
 concurrency:
-  group: pages
+  group: pages-production
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,16 +36,12 @@ jobs:
 
       - run: npm run build
 
-      - uses: actions/upload-pages-artifact@v3
+      # Replaces everything on gh-pages except the previews. dist carries
+      # CNAME and .nojekyll from public/; without .nojekyll, Pages would run
+      # the output through Jekyll, which drops _astro/ and .well-known/.
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-    steps:
-      - id: deploy
-        uses: actions/deploy-pages@v4
+          folder: dist
+          branch: gh-pages
+          clean-exclude: pr-preview/
+          force: false

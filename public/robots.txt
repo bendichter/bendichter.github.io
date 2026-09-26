@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# PR previews are copies of the site under review, not pages to index.
+Disallow: /pr-preview/
 
 Sitemap: https://bendichter.com/sitemap-index.xml
