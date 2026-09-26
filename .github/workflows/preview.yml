@@ -1,0 +1,54 @@
+name: PR preview
+
+# Every PR gets the site as it would look merged, at
+# https://bendichter.com/pr-preview/pr-<number>/, linked from a comment on the
+# PR. The preview is updated on every push and removed when the PR closes.
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# One run per PR at a time, so a quick second push cannot race the first and
+# leave the comment pointing at an older build.
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    # A fork's token cannot push to gh-pages, so previews are for branches in
+    # this repository.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - if: github.event.action != 'closed'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - if: github.event.action != 'closed'
+        run: npm ci
+
+      # The same build production runs, strict checks included, then moved
+      # under the preview's path. See scripts/rebase-preview.mjs for why the
+      # links are rewritten after the build rather than through Astro's `base`.
+      - if: github.event.action != 'closed'
+        run: |
+          npm run build
+          node scripts/rebase-preview.mjs /pr-preview/pr-${{ github.event.number }}/
+
+      # Deploys dist to gh-pages/pr-preview/pr-<number>/ and comments the link,
+      # or removes that directory when the PR is closed.
+      - uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: dist
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          pages-base-url: bendichter.com

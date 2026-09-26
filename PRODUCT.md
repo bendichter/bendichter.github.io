@@ -24,7 +24,7 @@ This site is Ben the individual, not the company. Company-level marketing lives 
 
 - Content types: blog posts and talks as markdown content collections (`src/content/`), publications fetched by script into `src/data/publications.json` (with manual additions in `publications-extra.json`), side projects and drone videos as typed data in `src/data/site.ts`.
 - Publications update via `npm run publications`; thumbnails and icons have similar scripts. Social cards are generated per post and per talk at build time (satori + resvg).
-- Deployed to GitHub Pages through a GitHub Actions workflow; the `master` branch is the source of truth and pushes go live automatically.
+- Deployed to GitHub Pages through a GitHub Actions workflow that pushes the build to `gh-pages`; the `master` branch is the source of truth and pushes go live automatically. Pull requests get previews at `/pr-preview/pr-<number>/` on the same branch.
 
 ## Capabilities and Constraints
 
