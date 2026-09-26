@@ -26,6 +26,7 @@ runs `npm ci && npm run build` and publishes `dist` to GitHub Pages.
 | `src/data/site.ts` | Name, nav, social links, the software list |
 | `src/data/publications.json` | Generated from ORCID, do not edit by hand |
 | `src/data/publications-extra.json` | Papers missing from ORCID, edited by hand |
+| `src/data/publication-authors.json` | Author lists by DOI, generated, do not edit by hand |
 | `src/assets/` | Images referenced by posts, optimized at build |
 | `public/` | Files served as-is: favicons, CV, `.well-known` |
 
@@ -57,6 +58,11 @@ npm run publications
 This rewrites `src/data/publications.json` from the public ORCID API, dropping
 the per-release software DOIs and collapsing preprints into their published
 versions. Commit the result, so builds stay offline and reproducible.
+
+It then rewrites `src/data/publication-authors.json` with each paper's author
+list, looked up by DOI (`npm run authors` does only this step). ORCID's
+summaries carry no authors, so a paper added to either publication file needs
+this run too, and the build fails until it has one.
 
 ORCID is currently missing some papers, so `publications-extra.json` holds those
 by hand. Every entry in that file is a gap in the ORCID record. Adding the work

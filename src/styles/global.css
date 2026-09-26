@@ -535,6 +535,24 @@ a.entry__title:hover {
   color: var(--muted);
 }
 
+/* Author lines on the publications page. My own name takes the entry-title
+   weight and ink, the same emphasis a title gets, rather than full bold. */
+.entry__authors {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+.entry__me {
+  color: var(--ink);
+  font-weight: 550;
+}
+
+.entry__count {
+  color: var(--faint);
+}
+
 /* ---- software ------------------------------------------------------- */
 
 .software {
