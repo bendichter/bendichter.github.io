@@ -29,8 +29,8 @@
     "journal": "eNeuro",
     "type": "journal-article",
     "year": 2024,
-    "url": "https://www.eneuro.org/content/11/2/ENEURO.0492-23.2023",
-    "doi": "10.1523/ENEURO.0492-23.2024",
+    "url": "https://doi.org/10.1523/ENEURO.0229-23.2023",
+    "doi": "10.1523/ENEURO.0229-23.2023",
     "aliases": ["A modular approach to handle in vivo drift correction for high-density extracellular recordings"]
   },
   {
@@ -47,8 +47,8 @@
     "journal": "Scientific Data",
     "type": "journal-article",
     "year": 2023,
-    "url": "https://www.nature.com/articles/s41597-023-02596-z",
-    "doi": "10.1038/s41597-023-02596-z"
+    "url": "https://www.nature.com/articles/s41597-023-02614-0",
+    "doi": "10.1038/s41597-023-02614-0"
   },
   {
     "title": "A guide to the BRAIN Initiative Cell Census Network data ecosystem",
@@ -79,8 +79,8 @@
     "journal": "bioRxiv",
     "type": "preprint",
     "year": 2019,
-    "url": "https://escholarship.org/uc/item/8582b6x9",
-    "doi": null
+    "url": "https://doi.org/10.1101/523035",
+    "doi": "10.1101/523035"
   },
   {
     "title": "Dynamic Structure of Neural Variability in the Cortical Representation of Speech Sounds",
@@ -95,16 +95,16 @@
     "journal": "IEEE Engineering in Medicine and Biology Society (EMBC)",
     "type": "conference-paper",
     "year": 2016,
-    "url": "https://ieeexplore.ieee.org/document/7591217",
-    "doi": "10.1109/EMBC.2016.7591217"
+    "url": "https://doi.org/10.1109/EMBC.2016.7591002",
+    "doi": "10.1109/EMBC.2016.7591002"
   },
   {
     "title": "ECoG data analyses to inform closed-loop BCI experiments for speech-based prosthetic applications",
     "journal": "IEEE Engineering in Medicine and Biology Society (EMBC)",
     "type": "conference-paper",
     "year": 2016,
-    "url": "https://ieeexplore.ieee.org/document/7591218",
-    "doi": "10.1109/EMBC.2016.7591218"
+    "url": "https://doi.org/10.1109/EMBC.2016.7592024",
+    "doi": "10.1109/EMBC.2016.7592024"
   },
   {
     "title": "Recurrent exponential-family harmoniums without backprop-through-time",
