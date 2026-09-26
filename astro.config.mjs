@@ -22,6 +22,8 @@ export default defineConfig({
     // the old WordPress-era blog index
     "/wordpress/blog-posts": "/posts",
     "/year-archive": "/posts",
+    // The nav says "Blog", so /blog is the URL people type and guess.
+    "/blog": "/posts",
     // The Jekyll site's CV page, which embedded a PDF that is no longer
     // published. The publication list is the part of it people came for.
     "/cv": "/publications",
