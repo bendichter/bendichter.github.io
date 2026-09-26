@@ -1,5 +1,7 @@
 import orcid from "../data/publications.json";
 import extra from "../data/publications-extra.json";
+import authorLists from "../data/publication-authors.json";
+import { doiFor } from "./doi.mjs";
 
 export type Publication = {
   title: string;
@@ -9,6 +11,8 @@ export type Publication = {
   url: string | null;
   doi: string | null;
   aliases?: string[];
+  /** Vancouver style, "Dichter BK". From publication-authors.json, or by hand. */
+  authors?: string[];
   _comment?: string;
 };
 
@@ -49,9 +53,50 @@ export function getPublications(): Publication[] {
     );
   }
 
-  return [...merged.values()].sort(
+  const lists = authorLists as Record<string, string[]>;
+  const pubs = [...merged.values()].map((pub) => {
+    const doi = doiFor(pub);
+    return pub.authors || !doi || !lists[doi] ? pub : { ...pub, authors: lists[doi] };
+  });
+
+  const missing = pubs.filter((pub) => !pub.authors?.length);
+  if (missing.length) {
+    throw new Error(
+      `publications: no author list for\n` +
+        missing.map((pub) => `  ${pub.title}`).join("\n") +
+        `\nRun \`npm run authors\` and commit publication-authors.json, or give ` +
+        `the entry an \`authors\` array in publications-extra.json if it has no DOI.`,
+    );
+  }
+
+  return pubs.sort(
     (a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title),
   );
+}
+
+export type AuthorPart = { name: string; me: boolean } | { gap: true };
+
+const isMe = (name: string) => /^Dichter\b/.test(name);
+
+/**
+ * The author line, cut down when it is long. A consortium paper can list over a
+ * hundred names, and what a reader wants from them is the lead authors, where I
+ * sit, and the senior author, so that is what survives:
+ *
+ *   Hawrylycz M, Martone ME, Ascoli GA, …, Dichter B, …, Zeng H
+ */
+export function authorParts(pub: Publication, max = 8): AuthorPart[] {
+  const names = pub.authors ?? [];
+  const part = (name: string): AuthorPart => ({ name, me: isMe(name) });
+  if (names.length <= max) return names.map(part);
+
+  const keep = new Set([0, 1, 2, names.length - 1, names.findIndex(isMe)]);
+  const parts: AuthorPart[] = [];
+  names.forEach((name, i) => {
+    if (keep.has(i)) parts.push(part(name));
+    else if (!("gap" in (parts.at(-1) ?? {}))) parts.push({ gap: true });
+  });
+  return parts;
 }
 
 /**

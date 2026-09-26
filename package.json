@@ -11,7 +11,8 @@
     "build": "astro build && node scripts/check-output.mjs",
     "preview": "astro preview",
     "check": "astro check",
-    "publications": "node scripts/fetch-publications.mjs",
+    "publications": "node scripts/fetch-publications.mjs && node scripts/fetch-authors.mjs",
+    "authors": "node scripts/fetch-authors.mjs",
     "astro": "astro",
     "thumbnails": "node scripts/fetch-thumbnails.mjs",
     "icons": "node scripts/make-icons.mjs"
