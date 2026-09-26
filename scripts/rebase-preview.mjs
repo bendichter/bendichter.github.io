@@ -20,7 +20,7 @@
  * not do.
  */
 
-import { readFile, writeFile, glob } from "node:fs/promises";
+import { readFile, writeFile, glob, rm } from "node:fs/promises";
 
 const arg = process.argv[2];
 if (!arg || !arg.startsWith("/")) {
@@ -63,6 +63,12 @@ function escapes(text) {
   ].flatMap((m) => m[1].split(",").map((c) => c.trim().split(/\s+/)[0]));
   return refs.filter((url) => url.startsWith("/") && !url.startsWith("//") && !url.startsWith(base));
 }
+
+// CNAME and .nojekyll only mean something at the root of the Pages branch.
+// Inside a preview they do nothing, and the deploy action never deletes those
+// two names, so a closed PR's preview left them behind in pr-preview/pr-N/.
+await rm(new URL("CNAME", DIST), { force: true });
+await rm(new URL(".nojekyll", DIST), { force: true });
 
 let files = 0;
 const leaks = [];

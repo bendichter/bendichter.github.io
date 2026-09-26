@@ -20,9 +20,11 @@ concurrency:
 
 jobs:
   preview:
-    # A fork's token cannot push to gh-pages, so previews are for branches in
-    # this repository.
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    # A fork's token cannot push to gh-pages, and neither can Dependabot's,
+    # which is read-only; a dependency bump changes nothing worth previewing.
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
