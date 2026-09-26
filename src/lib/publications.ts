@@ -30,9 +30,23 @@ export function getPublications(): Publication[] {
 
   for (const pub of orcid as Publication[]) merged.set(key(pub.title), pub);
 
+  // An alias that matches nothing is a duplicate still on the page: ORCID
+  // lists this preprint with its italics stripped out along with the spaces
+  // around them ("handlein-vivodrift"), so an alias typed from the paper
+  // itself never matched and both versions were listed.
+  const stale: string[] = [];
   for (const pub of extra as Publication[]) {
-    for (const alias of pub.aliases ?? []) merged.delete(key(alias));
+    for (const alias of pub.aliases ?? []) {
+      if (!merged.delete(key(alias))) stale.push(`  ${alias}`);
+    }
     merged.set(key(pub.title), pub);
+  }
+  if (stale.length) {
+    throw new Error(
+      `publications: an alias in publications-extra.json matches no ORCID ` +
+        `record, so it absorbs nothing.\n${stale.join("\n")}\nCopy the title ` +
+        `exactly as it appears in publications.json, or drop the alias.`,
+    );
   }
 
   return [...merged.values()].sort(
