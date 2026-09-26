@@ -1,0 +1,86 @@
+# Ben Dichter
+
+> Research Software Engineer and Founder of CatalystNeuro, working on data standards and open source tools for neuroscience.
+
+Personal site of Dr. Benjamin Dichter: publications, talks, blog posts, and side projects. Ben founded CatalystNeuro (https://catalystneuro.com), which works on Neurodata Without Borders (https://nwb.org) and the DANDI Archive (https://dandiarchive.org). The neuroscience software is CatalystNeuro's and is documented there; the software listed here is side projects.
+
+- Contact: ben.dichter@catalystneuro.com
+- GitHub: https://github.com/bendichter
+- Google Scholar: https://scholar.google.com/citations?user=_IwI_oEAAAAJ
+- ORCID: https://orcid.org/0000-0001-5725-6910
+- Bluesky: https://bsky.app/profile/bendichter.com
+- X: https://x.com/BenDichter
+
+## Pages
+
+- [About](https://bendichter.com/): who Ben is, his work, background, and interests
+- [Publications](https://bendichter.com/publications/): generated from ORCID 0000-0001-5725-6910
+- [Talks](https://bendichter.com/talks/): talks with recordings
+- [Blog](https://bendichter.com/posts/): posts about side projects
+- [Software](https://bendichter.com/software/): side projects
+
+## Publications
+
+- [Facilitating analysis of open neurophysiology data on the DANDI Archive using large language model tools](https://www.nature.com/articles/s41597-025-06285-x): Scientific Data, 2025 (selected)
+- [NeuroConv: Streamlining Neurophysiology Data Conversion to the NWB Standard](https://doi.org/10.25080/cehj4257): Conference paper, 2025
+- [Unifying community whole-brain imaging datasets enables robust neuron identification and reveals determinants of neuron position in C. elegans](https://doi.org/10.1016/j.crmeth.2024.100964): Cell Reports Methods, 2025
+- [A modular implementation to handle and benchmark drift correction for high-density extracellular recordings](https://doi.org/10.1523/ENEURO.0229-23.2023): eNeuro, 2024
+- [Methods for Linking Data to Online Resources and Ontologies with Applications to Neurophysiology](https://arxiv.org/abs/2406.00063): arXiv, 2024
+- [Neurosift: DANDI exploration and NWB visualization in the browser](https://doi.org/10.21105/joss.06590): Journal of Open Source Software, 2024 (selected)
+- [SciOps: Achieving Productivity and Reliability in Data-Intensive Research](https://arxiv.org/abs/2401.00077): arXiv, 2024
+- [A comparison of neuroelectrophysiology databases](https://www.nature.com/articles/s41597-023-02614-0): Scientific Data, 2023
+- [A guide to the BRAIN Initiative Cell Census Network data ecosystem](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002133): PLOS Biology, 2023
+- [AJILE12: Long-term naturalistic human intracranial neural recordings and pose](https://www.nature.com/articles/s41597-022-01280-y): Scientific Data, 2022
+- [The Neurodata Without Borders ecosystem for neurophysiological data science](https://doi.org/10.7554/elife.78362): eLife, 2022 (selected)
+- [Pan-neuro: Interactive computing at scale with BRAIN datasets](https://osf.io/mwh2b/download): OSF Preprints, 2021
+- [A NWB-based dataset and processing pipeline of human single-neuron activity during a declarative memory task](https://doi.org/10.1038/s41597-020-0415-9): Scientific Data, 2020
+- [The SONATA data format for efficient description of large-scale network models](https://doi.org/10.1371/journal.pcbi.1007696): PLOS Computational Biology, 2020
+- [HDMF: Hierarchical Data Modeling Framework for Modern Science Data Standards](https://doi.org/10.1109/bigdata47090.2019.9005648): 2019 IEEE International Conference on Big Data (Big Data), 2019
+- [iEEG-BIDS, extending the Brain Imaging Data Structure specification to human intracranial electrophysiology](https://doi.org/10.1038/s41597-019-0105-7): Scientific Data, 2019
+- [NWB:N 2.0: An Accessible Data Standard for Neurophysiology](https://doi.org/10.1101/523035): bioRxiv, 2019
+- [The Control of Vocal Pitch in Human Laryngeal Motor Cortex](https://doi.org/10.1016/j.cell.2018.05.016): Cell, 2018 (selected)
+- [Decoding speech using the timing of neural signal modulation](https://doi.org/10.1109/EMBC.2016.7591002): IEEE Engineering in Medicine and Biology Society (EMBC), 2016
+- [Dynamic Structure of Neural Variability in the Cortical Representation of Speech Sounds](https://www.jneurosci.org/content/36/28/7453): Journal of Neuroscience, 2016 (selected)
+- [ECoG data analyses to inform closed-loop BCI experiments for speech-based prosthetic applications](https://doi.org/10.1109/EMBC.2016.7592024): IEEE Engineering in Medicine and Biology Society (EMBC), 2016
+- [High-Resolution, Non-Invasive Imaging of Upper Vocal Tract Articulators Compatible with Human Brain Recordings](https://doi.org/10.1371/journal.pone.0151327): PLOS ONE, 2016
+- [Muscle synergies after stroke are correlated with perilesional high gamma](https://doi.org/10.1002/acn3.368): Annals of Clinical and Translational Neurology, 2016
+- [Recurrent exponential-family harmoniums without backprop-through-time](https://arxiv.org/abs/1605.05799): arXiv, 2016
+- [Learning to Estimate Dynamical State with Probabilistic Population Codes](https://doi.org/10.1371/journal.pcbi.1004554): PLoS Comput Biol, 2015 (selected)
+- [A multi-modal imaging system for simultaneous measurement of speech articulator kinematics for bedside applications in clinical settings](https://doi.org/10.1121/1.4899566): The Journal of the Acoustical Society of America, 2014
+
+## Talks
+
+- [Agent skills](https://bendichter.com/talks/2026-07-12-agent-skills): NeuroDataReHack 2026, 2026-07-12, video https://www.youtube.com/watch?v=CqFGg6sBXf4
+- [Getting started with AI agents](https://bendichter.com/talks/2026-07-12-ai-agents): NeuroDataReHack 2026, 2026-07-12, video https://www.youtube.com/watch?v=s9uiJMa_TaU
+- [A tour of NWB Dandisets and searching tools](https://bendichter.com/talks/2026-07-12-dandiset-tour): NeuroDataReHack 2026, 2026-07-12, video https://www.youtube.com/watch?v=cFyh45TA0J0
+- [Developing with LLMs](https://bendichter.com/talks/2026-07-12-developing-with-llms): NeuroDataReHack 2026, 2026-07-12, video https://www.youtube.com/watch?v=rn2AowyiJ8c
+- [How to write good issues](https://bendichter.com/talks/2026-07-12-writing-good-issues): NeuroDataReHack 2026, 2026-07-12, video https://www.youtube.com/watch?v=I-L-5U3-_j8
+- [Open Neurophysiology Data: NWB, DANDI, and IBL](https://bendichter.com/talks/2026-03-12-cosyne-tutorial): Cosyne 2026 Tutorial, 2026-03-12, video https://www.youtube.com/watch?v=J1O9ng06P5M
+- [A tour of DANDI datasets and search tools](https://bendichter.com/talks/2025-07-14-dandi-search): NeuroDataReHack 2025, 2025-07-14, video https://www.youtube.com/watch?v=7V8vZtMP9as
+- [Developing with LLMs](https://bendichter.com/talks/2025-07-14-developing-with-llms): NeuroDataReHack 2025, 2025-07-14, video https://www.youtube.com/watch?v=RW4lMW0sWQU
+- [Virtual Datasets and LINDI](https://bendichter.com/talks/2025-07-14-lindi): NeuroDataReHack 2025, 2025-07-14, video https://www.youtube.com/watch?v=3kCUDjgPXgQ
+- [Writing good issues](https://bendichter.com/talks/2025-07-14-writing-good-issues): NeuroDataReHack 2025, 2025-07-14, video https://www.youtube.com/watch?v=cEdS5hQdcX0
+- [NWBWidgets: Interactive visualization of NWB files](https://bendichter.com/talks/2020-05-13-nwbwidgets-1): NWB Remote User Days 2020, 2020-05-13, video https://www.youtube.com/watch?v=XoWdLNS_wHE
+- [NWB extensions for storing results of large-scale neural network simulations](https://bendichter.com/talks/2018-08-10-NWB-extension-simulation): INCF Assembly 2018, 2018-08-10, video https://www.youtube.com/watch?v=uuYQW0EE2GY
+
+## Software
+
+- [westie.wiki](https://westie.wiki): A community wiki for West Coast Swing moves, edited Wikipedia-style. Every move gets aliases, variants, and related patterns, and any YouTube dance can be marked up move by move so the timeline follows along with the video. Descriptive rather than prescriptive: it records how the community actually dances.
+- [Invisible String](https://invisiblestringapp.com): Finds the moments a couple was in the same place before they ever met. Matching runs on photo metadata, processed on the device, and pairing works from a code with no account, so the photos never leave the phone.
+- [ReachMyReps](https://reachmyreps.com): Look up your representatives at every level of government from an address, draft a letter about an issue with AI assistance, then edit it and send it. The tedious parts are automated and the message stays yours.
+- [Clnk](https://github.com/bendichter/clnk): An iOS app for finding and sharing cocktails at nearby bars, with ratings, photos, and maps.
+- [brokenaxes](https://github.com/bendichter/brokenaxes): A matplotlib package for plots with a broken axis, for when one outlier or one long gap would otherwise flatten everything else on the chart.
+- [activity-tracker](https://github.com/bendichter/activity-tracker): Pulls Google Workspace, GitHub, and Calendar activity into a single week view, which makes it obvious where the time actually went.
+
+## Blog posts
+
+- [Westie Wiki: the moves of West Coast Swing, documented by the people dancing them](https://bendichter.com/posts/2026-07-30-westie-wiki): 2026-07-30.
+- [ReachMyReps.com: AI-Powered Civic Engagement](https://bendichter.com/posts/2024/12/reachmyreps/): 2024-12-24.
+- [The new Code Crafter package for Python AST transformations](https://bendichter.com/posts/2024-03-31-code-crafter): 2024-03-31.
+- [Git Timesheet](https://bendichter.com/posts/2022-07-18-git-timesheet): 2022-07-18.
+- [Grouped Bar Plot](https://bendichter.com/posts/2022-07-18-grouped-bar-plot): 2022-07-18.
+- [Stacked Step Plot](https://bendichter.com/posts/2022-07-18-stacked-step-plot): 2022-07-18.
+- [Spiral Plot](https://bendichter.com/posts/2022-06-17-vis_cyclical-data): 2022-06-17.
+- [brokenaxes](https://bendichter.com/posts/2020-07-12-brokenaxes): 2020-07-12.
+- [OSX Jupyter Launcher](https://bendichter.com/posts/2018-04-23-osx-jupyter-launcher): 2018-04-23.
+- [tenseflow](https://bendichter.com/posts/2018-03-29-tenseflow): 2018-03-29.
